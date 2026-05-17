@@ -95,7 +95,7 @@ export function FoldMark({
 
       <div className="flex items-baseline gap-4">
         <span
-          className="font-display italic font-extralight leading-none tracking-[-0.02em] text-ink/85"
+          className="font-display italic font-extralight leading-none tracking-[-0.02em] text-ink/90"
           style={{ fontSize: "clamp(2.5rem, 4vw, 3.75rem)" }}
         >
           {index}

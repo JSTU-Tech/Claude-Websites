@@ -54,7 +54,7 @@ export function Hero() {
                 <span className="relative z-10">booked jobs.</span>
                 <motion.span
                   aria-hidden="true"
-                  className="absolute inset-x-0 bottom-[0.1em] h-[0.07em] bg-accent origin-left"
+                  className="absolute inset-x-0 bottom-[-0.04em] h-[0.06em] bg-accent origin-left"
                   initial={prefersReduced ? { scaleX: 1 } : { scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{
@@ -74,7 +74,7 @@ export function Hero() {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 pt-8 md:pt-10">
         <motion.p
-          className="md:col-span-7 lg:col-span-6 text-ink/85 max-w-[55ch]"
+          className="md:col-span-7 lg:col-span-6 text-ink/90 max-w-[55ch]"
           style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.5 }}
           {...reveal(1.4)}
         >

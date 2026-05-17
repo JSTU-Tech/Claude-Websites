@@ -31,7 +31,7 @@ export function PricingSignal() {
           >
             <span className="block text-ink">Projects from</span>
             <span className="block text-accent">£4,800.</span>
-            <span className="block text-ink/85">
+            <span className="block text-ink/90">
               Most clients invest{" "}
               <span className="whitespace-nowrap">£6k&nbsp;–&nbsp;£12k</span>.
             </span>
@@ -42,7 +42,7 @@ export function PricingSignal() {
             className="md:col-span-4 flex flex-col gap-5 md:pb-3 max-w-[40ch]"
           >
             <p
-              className="text-ink/85"
+              className="text-ink/90"
               style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             >
               One quote, fixed for the project. Copy, design, build, Cal.com

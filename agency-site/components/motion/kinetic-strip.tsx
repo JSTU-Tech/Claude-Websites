@@ -1,24 +1,14 @@
 "use client";
 
-import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-  useVelocity,
-  wrap,
-  useReducedMotion,
-} from "motion/react";
-import { useRef } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
 /**
- * Kinetic type strip. Two duplicate text tracks scroll horizontally at a
- * baseline velocity. The user's scroll velocity is fed in through a spring
- * to modulate speed — fast scroll punches the marquee, idle scroll keeps
- * it at a slow drift. The text "wraps" via a motion value so the two
- * tracks repeat seamlessly.
+ * Kinetic type strip — seamless infinite marquee. Two identical tracks
+ * sit side by side inside an overflow-hidden window. Motion animates the
+ * outer flex container x from 0 to -50% of its own width (= one full
+ * track width). At -50% the second track sits exactly where the first
+ * began, so the loop wraps invisibly. No useAnimationFrame, no scroll
+ * coupling — it just runs.
  *
  * Reference: Basement Studio / Tomorrow studio statement strips.
  */
@@ -26,78 +16,62 @@ import { useRef } from "react";
 type Props = {
   items: string[];
   separator?: string;
-  /** Base translation in pixels per second. Negative = right→left. */
-  baseVelocity?: number;
-  /** How much scroll velocity influences the strip (default 0.04). */
-  scrollInfluence?: number;
+  /** Seconds for one full loop. Higher = slower. */
+  durationSec?: number;
 };
 
 export function KineticStrip({
   items,
   separator = "—",
-  baseVelocity = -50,
-  scrollInfluence = 0.04,
+  durationSec = 45,
 }: Props) {
   const prefersReduced = useReducedMotion();
 
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
-  const velocityFactor = useTransform(
-    smoothVelocity,
-    [0, 1000],
-    [0, scrollInfluence * 1000],
-    { clamp: false },
-  );
-
-  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
-  const directionFactor = useRef(1);
-
-  useAnimationFrame((_, delta) => {
-    if (prefersReduced) return;
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-    const vFactor = velocityFactor.get();
-    if (vFactor < 0) {
-      directionFactor.current = -1;
-    } else if (vFactor > 0) {
-      directionFactor.current = 1;
-    }
-    moveBy += directionFactor.current * moveBy * vFactor * 0.5;
-    baseX.set(baseX.get() + moveBy);
-  });
-
-  const track = (
-    <span className="inline-flex items-center gap-x-12 pr-12">
+  const Track = () => (
+    <div
+      aria-hidden="true"
+      className="flex shrink-0 items-center gap-x-14 pr-14"
+    >
       {items.map((item, i) => (
-        <span key={i} className="inline-flex items-center gap-x-12">
+        <div key={i} className="flex items-center gap-x-14">
           <span>{item}</span>
           <span className="text-accent">{separator}</span>
-        </span>
+        </div>
       ))}
-    </span>
+    </div>
   );
 
   return (
     <section
-      aria-hidden="true"
-      className="overflow-hidden border-y border-rule bg-bg-deep/50 py-7 md:py-9"
+      aria-label="Studio statement"
+      className="overflow-hidden border-y border-rule bg-bg-deep py-7 md:py-9"
     >
       <motion.div
-        className="whitespace-nowrap font-display italic font-extralight text-ink/90 will-change-transform"
+        className="flex w-max will-change-transform"
         style={{
+          fontFamily: "var(--font-display)",
           fontSize: "clamp(2.5rem, 5.5vw, 5rem)",
+          fontStyle: "italic",
+          fontWeight: 400,
           letterSpacing: "-0.02em",
-          x: prefersReduced ? 0 : x,
+          color: "var(--color-ink)",
         }}
+        animate={
+          prefersReduced ? undefined : { x: ["0%", "-50%"] }
+        }
+        transition={
+          prefersReduced
+            ? undefined
+            : {
+                duration: durationSec,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "loop",
+              }
+        }
       >
-        {track}
-        {track}
-        {track}
-        {track}
+        <Track />
+        <Track />
       </motion.div>
     </section>
   );

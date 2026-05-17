@@ -53,7 +53,7 @@ export function FinalCta() {
                 <span className="relative z-10">using.</span>
                 <motion.span
                   aria-hidden="true"
-                  className="absolute inset-x-0 bottom-[0.1em] h-[0.07em] bg-accent-soft origin-left"
+                  className="absolute inset-x-0 bottom-[-0.04em] h-[0.06em] bg-accent-soft origin-left"
                   initial={prefersReduced ? { scaleX: 1 } : { scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true, amount: 0.4 }}

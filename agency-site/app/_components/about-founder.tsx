@@ -57,7 +57,7 @@ export function AboutFounder() {
           </h2>
 
           <div
-            className="flex flex-col gap-5 text-ink/85 max-w-[58ch]"
+            className="flex flex-col gap-5 text-ink/90 max-w-[58ch]"
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
           >
             <p>

@@ -32,7 +32,7 @@ export function ProofBar() {
           style={{ fontSize: "var(--text-h1)" }}
         >
           {proof.number}{" "}
-          <span className="font-body not-italic font-normal text-ink/85 text-[0.45em] tracking-normal leading-snug align-baseline">
+          <span className="font-body not-italic font-normal text-ink/90 text-[0.45em] tracking-normal leading-snug align-baseline">
             {proof.caption}
           </span>
         </RevealItem>

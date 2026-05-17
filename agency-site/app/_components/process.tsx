@@ -52,7 +52,7 @@ export function Process() {
         {/* Intro */}
         <RevealItem
           as="p"
-          className="md:col-span-4 font-display italic font-extralight text-ink/85 leading-[1.1] tracking-[-0.01em]"
+          className="md:col-span-4 font-display italic font-extralight text-ink/90 leading-[1.1] tracking-[-0.01em]"
           style={{ fontSize: "var(--text-h2)" }}
         >
           Four steps. No surprises. Fixed prices.
@@ -81,7 +81,7 @@ export function Process() {
                     {step.title}
                   </h3>
                   <p
-                    className="text-ink/85 max-w-[52ch]"
+                    className="text-ink/90 max-w-[52ch]"
                     style={{ fontSize: "var(--text-body)", lineHeight: 1.55 }}
                   >
                     {step.body}

@@ -75,7 +75,7 @@ export function WhoThisIsFor() {
                 {card.trade}
               </h3>
               <p
-                className="text-ink/85"
+                className="text-ink/90"
                 style={{ fontSize: "var(--text-body)", lineHeight: 1.55 }}
               >
                 {card.outcome}

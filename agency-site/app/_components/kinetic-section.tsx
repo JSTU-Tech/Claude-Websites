@@ -19,7 +19,7 @@ export function KineticSection() {
         "Plain English, no retainers",
       ]}
       separator="✦"
-      baseVelocity={-38}
+      durationSec={42}
     />
   );
 }

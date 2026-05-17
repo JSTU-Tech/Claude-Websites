@@ -68,7 +68,7 @@ export function RevealLines({
         <span
           key={i}
           className="block overflow-hidden"
-          style={{ paddingBottom: "0.04em" }}
+          style={{ paddingBottom: "0.18em", marginBottom: "-0.18em" }}
         >
           <motion.span
             variants={line}

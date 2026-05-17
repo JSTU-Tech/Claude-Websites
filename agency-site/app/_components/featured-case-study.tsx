@@ -12,13 +12,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 /**
  * Featured case study — the site's one narrative scroll moment (DESIGN.md
- * §5 #4). The section pins for ~150vh of scroll and a single timeline scrubs
- * three reveals: opening title → digit count-up of the headline stat →
- * owner quote and CTA. The reveal is typographic — no client images yet, so
- * the before/after IS the type itself shifting weight.
+ * §5 #4). A single GSAP timeline plays *once* when the section enters the
+ * viewport: title rise → digit count-up of the headline stat → owner quote
+ * → CTA. Not scrubbed — scrubbing reversed the count on scroll-back, which
+ * the founder flagged as UX-harming. The reveal still feels scroll-driven
+ * because it triggers on enter; it just doesn't undo itself.
  *
- * Reference: Locomotive's "Atelier" pinned takeover; Tomorrow Studio's
- * stat-as-narrative case study pages.
+ * Reference: Locomotive's "Atelier" reveal; Tomorrow Studio's stat-as-
+ * narrative case study pages.
  */
 
 const study = {
@@ -36,7 +37,6 @@ const study = {
 
 export function FeaturedCaseStudy() {
   const container = useRef<HTMLElement | null>(null);
-  const pin = useRef<HTMLDivElement | null>(null);
   const eyebrowRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const statRef = useRef<HTMLSpanElement | null>(null);
@@ -63,42 +63,37 @@ export function FeaturedCaseStudy() {
         return;
       }
 
+      // Pre-set the to-animate elements to hidden so they don't flash
+      // before ScrollTrigger fires.
+      gsap.set(
+        [eyebrowRef.current, titleRef.current, quoteRef.current, ctaRef.current],
+        { autoAlpha: 0 },
+      );
+
       const counter = { value: 0 };
 
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: pin.current,
-          start: "top top",
-          end: "+=180%",
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.6,
-          invalidateOnRefresh: true,
-        },
+        paused: true,
+        defaults: { ease: "power3.out" },
       });
 
-      tl.from(eyebrowRef.current, {
-        y: 24,
-        autoAlpha: 0,
-        ease: "power2.out",
+      tl.to(eyebrowRef.current, {
+        autoAlpha: 1,
+        y: 0,
         duration: 0.6,
       })
-        .from(
+        .fromTo(
           titleRef.current,
-          {
-            y: 60,
-            autoAlpha: 0,
-            ease: "power3.out",
-            duration: 1.2,
-          },
-          0,
+          { y: 60, autoAlpha: 0 },
+          { autoAlpha: 1, y: 0, duration: 1.1 },
+          0.05,
         )
         .to(
           counter,
           {
             value: study.statValue,
-            ease: "none",
-            duration: 1.4,
+            ease: "power2.out",
+            duration: 1.8,
             snap: { value: 1 },
             onUpdate: () => {
               if (statRef.current) {
@@ -108,31 +103,30 @@ export function FeaturedCaseStudy() {
               }
             },
           },
-          0.7,
+          0.55,
         )
-        .from(
+        .fromTo(
           quoteRef.current,
-          {
-            y: 40,
-            autoAlpha: 0,
-            ease: "power2.out",
-            duration: 0.8,
-          },
-          1.8,
+          { y: 40, autoAlpha: 0 },
+          { autoAlpha: 1, y: 0, duration: 0.9 },
+          1.6,
         )
-        .from(
+        .fromTo(
           ctaRef.current,
-          {
-            y: 24,
-            autoAlpha: 0,
-            ease: "power2.out",
-            duration: 0.6,
-          },
-          2.2,
+          { y: 24, autoAlpha: 0 },
+          { autoAlpha: 1, y: 0, duration: 0.6 },
+          2.1,
         );
 
+      const trigger = ScrollTrigger.create({
+        trigger: container.current,
+        start: "top 65%",
+        once: true,
+        onEnter: () => tl.play(),
+      });
+
       return () => {
-        tl.scrollTrigger?.kill();
+        trigger.kill();
         tl.kill();
       };
     },
@@ -145,10 +139,7 @@ export function FeaturedCaseStudy() {
       aria-labelledby="case-heading"
       className="bg-ink-deep text-bg"
     >
-      <div
-        ref={pin}
-        className="relative min-h-[100svh] overflow-hidden flex flex-col"
-      >
+      <div className="relative min-h-[100svh] overflow-hidden flex flex-col">
         {/* Background hairline frame */}
         <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-bg/10" />
 
