@@ -1,0 +1,45 @@
+# Studio-level ignores. Subprojects can layer their own .gitignore on top.
+
+# Other client projects live in clients/ and are separately versioned
+clients/
+
+# Node
+**/node_modules/
+**/.pnpm-store/
+
+# Next.js
+**/.next/
+**/out/
+**/.vercel/
+
+# Build & cache
+**/dist/
+**/build/
+**/.turbo/
+**/.cache/
+
+# Env
+**/.env
+**/.env.*
+!**/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local config (machine-specific permissions/auth)
+.claude/settings.local.json
+.claude/*.local.*
