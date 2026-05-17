@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import { Grain } from "@/components/grain";
 
 const boska = localFont({
   src: [
@@ -54,6 +55,7 @@ export default function RootLayout({
       className={`${boska.variable} ${switzer.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
+        <Grain />
         <SiteHeader />
         <main className="flex-1 flex flex-col">{children}</main>
       </body>
