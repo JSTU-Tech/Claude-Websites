@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ---------- Ink & Bone palette + motion tokens (locked in DESIGN.md) ---------- */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Palette */
+  --color-bg: #f4f1ea;
+  --color-ink: #171514;
+  --color-accent: #7a1f1b;
+  --color-muted: #8a847b;
+  --color-rule: #1715141a;
+
+  /* Type families — set as variables by next/font/local in layout.tsx */
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+
+  /* Fluid type scale (rem) — DESIGN.md §4 */
+  --text-eyebrow: 0.75rem;
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-h3: clamp(1.5rem, 1.4rem + 0.5vw, 1.75rem);
+  --text-h2: clamp(2.25rem, 2rem + 1.25vw, 3rem);
+  --text-h1: clamp(3.5rem, 3rem + 2.5vw, 5rem);
+  --text-hero: clamp(4rem, 3rem + 7vw, 10rem);
+
+  /* Motion easing — DESIGN.md §5 */
+  --ease-quart: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-quart-inout: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---------- Base ---------- */
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-body);
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+/* ---------- Editorial primitives ---------- */
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "ss01", "ss02";
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.rule {
+  border-top: 1px solid var(--color-rule);
+}
+
+/* Animated underline — DESIGN.md §5 link rule */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1em;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms var(--ease-quart);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

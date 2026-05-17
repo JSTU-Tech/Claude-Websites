@@ -43,3 +43,8 @@ Thumbs.db
 # Claude Code local config (machine-specific permissions/auth)
 .claude/settings.local.json
 .claude/*.local.*
+
+# Local scratch
+.screenshots/
+.scratch/
+**/tsconfig.tsbuildinfo

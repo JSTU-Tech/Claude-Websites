@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SiteHeader } from "@/components/site-header";
 
 const boska = localFont({
   src: [
@@ -37,9 +38,9 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "[Studio Name] — Websites that book more jobs",
+  title: "Stuckey — Websites that turn local searches into booked jobs",
   description:
-    "Websites for trades, hospitality, and professional services that turn local searches into booked jobs. Most sites pay for themselves in 60–90 days.",
+    "I build websites for trades, hospitality, and professional services that book more jobs than the one you have now. Most sites pay for themselves in 60–90 days.",
 };
 
 export default function RootLayout({
@@ -52,7 +53,10 @@ export default function RootLayout({
       lang="en"
       className={`${boska.variable} ${switzer.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-bg text-ink">
+        <SiteHeader />
+        <main className="flex-1 flex flex-col">{children}</main>
+      </body>
     </html>
   );
 }
