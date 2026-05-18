@@ -61,7 +61,7 @@ export function WhoThisIsFor() {
         {cards.map((card) => (
           <RevealItem
             key={card.variant}
-            className="group relative bg-bg p-8 md:p-10 flex flex-col gap-8 transition-[transform,border-color,background-color] duration-300 ease-[var(--ease-quart)] hover:bg-paper hover:-translate-y-[3px]"
+            className="group relative bg-paper p-8 md:p-10 flex flex-col gap-8 transition-[transform,border-color,background-color] duration-300 ease-[var(--ease-quart)] hover:bg-bg-deep hover:-translate-y-[3px]"
           >
             <VerticalIcon
               variant={card.variant}

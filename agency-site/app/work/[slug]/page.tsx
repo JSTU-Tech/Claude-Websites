@@ -41,19 +41,19 @@ export default async function CaseStudyPage({
   return (
     <article>
       {/* HERO */}
-      <header className="bg-ink-deep text-bg">
+      <header className="bg-ink-deep text-ink">
         <div className="relative min-h-[80svh] flex flex-col px-6 md:px-10 pt-14 md:pt-20 pb-12 md:pb-16">
-          <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-bg/10" />
+          <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-ink/10" />
 
           <div className="relative">
             <FoldMark
               index="01"
               label="Case study"
-              className="text-bg [&_.eyebrow]:text-bg/60"
+              className="text-ink [&_.eyebrow]:text-ink/60"
             />
 
-            <div className="mt-10 flex flex-wrap items-center gap-3 text-[0.75rem] tracking-[0.08em] uppercase text-bg/60">
-              <span className="inline-block h-px w-8 bg-bg/40" />
+            <div className="mt-10 flex flex-wrap items-center gap-3 text-[0.75rem] tracking-[0.08em] uppercase text-ink/60">
+              <span className="inline-block h-px w-8 bg-ink/40" />
               <span>{study.verticalLabel}</span>
               <span aria-hidden="true">·</span>
               <span>{study.year}</span>
@@ -72,7 +72,7 @@ export default async function CaseStudyPage({
             </h1>
 
             <p
-              className="mt-6 text-bg/80 max-w-[50ch]"
+              className="mt-6 text-ink/80 max-w-[50ch]"
               style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             >
               {study.client}
@@ -81,9 +81,9 @@ export default async function CaseStudyPage({
 
           {/* Outcome strip */}
           <div className="relative mt-auto pt-12">
-            <div className="border-t border-bg/10 pt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="border-t border-ink/10 pt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="flex flex-col gap-3">
-                <span className="eyebrow text-bg/55">Outcome</span>
+                <span className="eyebrow text-ink/55">Outcome</span>
                 <p
                   className="font-display font-normal text-accent-soft leading-[0.95] tracking-[-0.03em]"
                   style={{ fontSize: "clamp(3.5rem, 9vw, 7.5rem)" }}
@@ -91,7 +91,7 @@ export default async function CaseStudyPage({
                   {study.outcome.value}
                 </p>
                 <p
-                  className="text-bg/80 max-w-[28ch]"
+                  className="text-ink/80 max-w-[28ch]"
                   style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.5 }}
                 >
                   {study.outcome.caption}
@@ -133,7 +133,7 @@ export default async function CaseStudyPage({
 
             {/* Inner editorial composition — placeholder until a real screenshot exists */}
             <div className="flex-1 grid grid-cols-12 grid-rows-6 gap-px bg-rule">
-              <div className="col-span-12 row-span-4 bg-bg px-8 py-10 md:px-14 md:py-16 flex flex-col justify-end">
+              <div className="col-span-12 row-span-4 bg-paper px-8 py-10 md:px-14 md:py-16 flex flex-col justify-end">
                 <span className="eyebrow mb-3">{study.verticalLabel}</span>
                 <p
                   className="font-display font-normal text-ink leading-[0.98] tracking-[-0.02em] max-w-[20ch]"
@@ -151,7 +151,7 @@ export default async function CaseStudyPage({
                   {study.outcome.value}
                 </span>
               </div>
-              <div className="col-span-4 row-span-2 bg-bg p-5 flex flex-col justify-between">
+              <div className="col-span-4 row-span-2 bg-paper p-5 flex flex-col justify-between">
                 <span className="eyebrow">Client</span>
                 <span className="text-ink text-[0.9375rem]">
                   {study.client}

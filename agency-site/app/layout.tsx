@@ -40,9 +40,9 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Stuckey — Websites that turn local searches into booked jobs",
+  title: "Stuckey — Websites that pay for themselves",
   description:
-    "I build websites for trades, hospitality and professional services across the UK that pay for themselves in 60–90 days.",
+    "Websites for tradespeople, restaurants and professional services across the UK. Built in four weeks, in profit by ninety days.",
 };
 
 export default function RootLayout({

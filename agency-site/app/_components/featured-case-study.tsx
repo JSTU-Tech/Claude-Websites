@@ -137,24 +137,24 @@ export function FeaturedCaseStudy() {
     <section
       ref={container}
       aria-labelledby="case-heading"
-      className="bg-ink-deep text-bg"
+      className="bg-ink-deep text-ink"
     >
       <div className="relative min-h-[100svh] overflow-hidden flex flex-col">
         {/* Background hairline frame */}
-        <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-bg/10" />
+        <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-ink/10" />
 
         <div className="relative flex-1 flex flex-col px-6 md:px-10 pt-14 md:pt-20 pb-10 md:pb-14">
           <FoldMark
             index="02"
             label="Featured case"
-            className="text-bg [&_.eyebrow]:text-bg/60"
+            className="text-ink [&_.eyebrow]:text-ink/60"
           />
 
           <div
             ref={eyebrowRef}
-            className="mt-10 flex items-center gap-3 text-[0.75rem] tracking-[0.08em] uppercase text-bg/60"
+            className="mt-10 flex items-center gap-3 text-[0.75rem] tracking-[0.08em] uppercase text-ink/60"
           >
-            <span className="inline-block h-px w-8 bg-bg/40" />
+            <span className="inline-block h-px w-8 bg-ink/40" />
             <span>{study.caseLabel}</span>
           </div>
 
@@ -172,9 +172,9 @@ export function FeaturedCaseStudy() {
 
           {/* Stat band — sits centred-low in the pin */}
           <div className="mt-auto pt-12 md:pt-16">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-16 border-t border-bg/10 pt-10 md:pt-14">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-16 border-t border-ink/10 pt-10 md:pt-14">
               <div className="md:max-w-[50%] flex flex-col gap-3">
-                <span className="eyebrow text-bg/55">Outcome</span>
+                <span className="eyebrow text-ink/55">Outcome</span>
                 <p
                   className="font-display font-normal text-accent-soft leading-[0.95] tracking-[-0.03em]"
                   style={{ fontSize: "clamp(4rem, 10vw, 9rem)" }}
@@ -186,7 +186,7 @@ export function FeaturedCaseStudy() {
                   {study.statSuffix}
                 </p>
                 <p
-                  className="text-bg/80 max-w-[28ch]"
+                  className="text-ink/80 max-w-[28ch]"
                   style={{
                     fontSize: "var(--text-body-lg)",
                     lineHeight: 1.5,
@@ -200,14 +200,14 @@ export function FeaturedCaseStudy() {
                 ref={quoteRef}
                 className="md:max-w-[45%] flex flex-col gap-5"
               >
-                <span className="eyebrow text-bg/55">Owner</span>
+                <span className="eyebrow text-ink/55">Owner</span>
                 <p
-                  className="font-display font-normal text-bg leading-[1.15]"
+                  className="font-display font-normal text-ink leading-[1.15]"
                   style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.25rem)" }}
                 >
                   &ldquo;{study.quote}&rdquo;
                 </p>
-                <p className="text-[0.8125rem] tracking-[0.06em] uppercase text-bg/55">
+                <p className="text-[0.8125rem] tracking-[0.06em] uppercase text-ink/55">
                   — {study.attribution}
                 </p>
               </div>
@@ -215,14 +215,14 @@ export function FeaturedCaseStudy() {
 
             <div
               ref={ctaRef}
-              className="mt-10 md:mt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t border-bg/10 pt-8"
+              className="mt-10 md:mt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t border-ink/10 pt-8"
             >
-              <p className="text-[0.8125rem] tracking-[0.08em] uppercase text-bg/55">
+              <p className="text-[0.8125rem] tracking-[0.08em] uppercase text-ink/55">
                 Concept project — methodology proven, client TBD
               </p>
               <Link
                 href={study.ctaHref}
-                className="group inline-flex items-center gap-3 text-bg text-[0.95rem] font-medium tracking-wide"
+                className="group inline-flex items-center gap-3 text-ink text-[0.95rem] font-medium tracking-wide"
               >
                 <span className="link-underline">{study.cta}</span>
                 <span

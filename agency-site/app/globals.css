@@ -3,17 +3,17 @@
 /* ---------- Palette + motion tokens (DESIGN.md §3, §5) ---------- */
 
 @theme inline {
-  /* Palette — Slate & Sage (DESIGN.md §3) */
-  --color-bg: #f2f0ea;
-  --color-bg-deep: #e7e2d6;
-  --color-paper: #fbf8f2;
-  --color-ink: #131310;
-  --color-ink-deep: #08070a;
-  --color-accent: #18433b;
+  /* Palette — Forest & Bone (dark-first, DESIGN.md §3) */
+  --color-bg: #0a0908;
+  --color-bg-deep: #14120e;
+  --color-paper: #1e1b14;
+  --color-ink: #f2f0ea;
+  --color-ink-deep: #04030b;
+  --color-accent: #2a7a66;
   --color-accent-soft: #6ba38b;
   --color-mineral: #2b3c3a;
-  --color-muted: #6f6c66;
-  --color-rule: #1313101a;
+  --color-muted: #8c8980;
+  --color-rule: #f2f0ea1a;
 
   /* Type families — set as variables by next/font/local in layout.tsx */
   --font-display: var(--font-display);
@@ -51,8 +51,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-bg);
+  background: var(--color-accent-soft);
+  color: var(--color-ink-deep);
 }
 
 /* ---------- Editorial primitives ---------- */

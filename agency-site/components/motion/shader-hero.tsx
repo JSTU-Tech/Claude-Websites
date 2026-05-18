@@ -229,7 +229,7 @@ export const ShaderHero: React.FC<ShaderHeroProps> = ({
     <section
       ref={sectionRef}
       className={[
-        "relative w-full overflow-hidden bg-ink-deep text-bg",
+        "relative w-full overflow-hidden bg-ink-deep text-ink",
         "min-h-[80svh] flex items-center justify-center",
         className,
       ].join(" ")}
@@ -241,15 +241,15 @@ export const ShaderHero: React.FC<ShaderHeroProps> = ({
       />
 
       {/* Subtle frame echoing the rest of the site */}
-      <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-bg/10" />
+      <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-ink/10" />
 
       <div className="relative z-10 px-6 md:px-10 max-w-5xl text-center flex flex-col items-center gap-8">
         {eyebrow ? (
-          <p className="eyebrow text-bg/55">{eyebrow}</p>
+          <p className="eyebrow text-ink/55">{eyebrow}</p>
         ) : null}
 
         <h2
-          className="font-display font-normal leading-[0.96] tracking-[-0.025em] text-bg"
+          className="font-display font-normal leading-[0.96] tracking-[-0.025em] text-ink"
           style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
         >
           <span className="block">{headline.line1}</span>
@@ -265,7 +265,7 @@ export const ShaderHero: React.FC<ShaderHeroProps> = ({
         </h2>
 
         <p
-          className="text-bg/85 max-w-[58ch] mx-auto"
+          className="text-ink/85 max-w-[58ch] mx-auto"
           style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
         >
           {subtitle}
@@ -311,8 +311,8 @@ function ButtonLink({
 }) {
   const classes =
     variant === "primary"
-      ? "bg-bg text-ink-deep hover:bg-accent-soft hover:text-bg"
-      : "bg-transparent text-bg border border-bg/30 hover:bg-bg/10";
+      ? "bg-ink text-ink-deep hover:bg-accent-soft hover:text-ink"
+      : "bg-transparent text-ink border border-ink/30 hover:bg-ink/10";
   const common =
     "inline-flex items-center justify-center gap-3 px-8 py-4 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)]";
   if (href) {

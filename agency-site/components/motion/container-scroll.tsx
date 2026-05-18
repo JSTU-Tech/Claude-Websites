@@ -106,7 +106,7 @@ const Card = ({
       }}
       className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-[3px] border-ink-deep/40 p-2 md:p-4 bg-ink-deep rounded-2xl shadow-2xl"
     >
-      <div className="h-full w-full overflow-hidden rounded-xl bg-bg md:rounded-xl">
+      <div className="h-full w-full overflow-hidden rounded-xl bg-bg-deep md:rounded-xl">
         {children}
       </div>
     </motion.div>

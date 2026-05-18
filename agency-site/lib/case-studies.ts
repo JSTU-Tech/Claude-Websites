@@ -90,10 +90,10 @@ export const caseStudies: CaseStudy[] = [
     verticalLabel: "Professional services",
     year: "2026",
     status: "concept",
-    title: "Every enquiry that lands is pre-qualified.",
+    title: "Every enquiry that lands is the right one.",
     outcome: {
       value: "4×",
-      caption: "qualified enquiries, half the call time",
+      caption: "the right enquiries, half the call time",
     },
     problem: [
       "Hatch & Co. is a five-partner accountancy firm in Bristol that wanted SME owners as clients, not personal-tax filings. Their site listed every service they offered and converted nobody. The director was spending two days a week on intro calls that didn't go anywhere.",
@@ -105,10 +105,10 @@ export const caseStudies: CaseStudy[] = [
     ],
     result: [
       "Total enquiries dropped 28%. Qualified enquiries (right SME size, right service line) lifted 4×. The director's intro-call time fell from two days a week to four hours.",
-      "Conversion rate from qualified enquiry to retained client: 61%. From total enquiry: also 61% — because the unqualified ones don't make it through the form.",
+      "Conversion rate from enquiry to retained client: 61%. Up from 9%. The change came entirely from the wrong enquiries never landing in the first place.",
     ],
     quote: {
-      body: "Every enquiry that lands now is pre-qualified. I spend half the time on phone calls and twice as many of them turn into clients.",
+      body: "Every enquiry that lands is the right one. I spend half the time on phone calls and twice as many of them turn into clients.",
       name: "Aleks H.",
       role: "Director, Hatch & Co.",
     },

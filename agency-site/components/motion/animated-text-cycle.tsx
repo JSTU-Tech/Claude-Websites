@@ -25,9 +25,12 @@ export default function AnimatedTextCycle({
   interval = 4200,
   className = "",
 }: AnimatedTextCycleProps) {
+  const [mounted, setMounted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [width, setWidth] = useState<string>("auto");
   const measureRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!measureRef.current) return;
@@ -39,11 +42,22 @@ export default function AnimatedTextCycle({
   }, [currentIndex]);
 
   useEffect(() => {
+    if (!mounted) return;
     const t = setInterval(() => {
       setCurrentIndex((i) => (i + 1) % words.length);
     }, interval);
     return () => clearInterval(t);
-  }, [interval, words.length]);
+  }, [mounted, interval, words.length]);
+
+  // Render static first word during SSR + first client paint to avoid
+  // hydration mismatch from Motion's injected styles.
+  if (!mounted) {
+    return (
+      <span className={`inline-block ${className}`} style={{ whiteSpace: "nowrap" }}>
+        {words[0]}
+      </span>
+    );
+  }
 
   const variants = {
     hidden: { y: -16, opacity: 0, filter: "blur(6px)" },

@@ -34,7 +34,7 @@ export function FinalCta() {
   return (
     <section
       aria-labelledby="final-heading"
-      className="relative bg-ink-deep text-bg px-6 md:px-10 py-28 md:py-40 overflow-hidden"
+      className="relative bg-ink-deep text-ink px-6 md:px-10 py-28 md:py-40 overflow-hidden"
     >
       <WebGLShader className="opacity-60" />
       <div
@@ -43,13 +43,13 @@ export function FinalCta() {
       />
 
       <div className="relative">
-      <motion.p className="eyebrow text-bg/55" {...fade(0)}>
+      <motion.p className="eyebrow text-ink/55" {...fade(0)}>
         Closing — Book a call
       </motion.p>
 
       <h2
         id="final-heading"
-        className="font-display font-normal mt-10 md:mt-14 tracking-[-0.02em] text-bg"
+        className="font-display font-normal mt-10 md:mt-14 tracking-[-0.02em] text-ink"
         style={{ fontSize: "clamp(3rem, 9vw, 8.5rem)", lineHeight: 0.96 }}
       >
         <RevealLines>
@@ -82,7 +82,7 @@ export function FinalCta() {
         {...fade(1.1)}
       >
         <p
-          className="md:col-span-7 lg:col-span-6 text-bg/80 max-w-[55ch]"
+          className="md:col-span-7 lg:col-span-6 text-ink/80 max-w-[55ch]"
           style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
         >
           Twenty-minute call. No deck. I&apos;ll ask three questions, look at
@@ -95,7 +95,7 @@ export function FinalCta() {
             <Link
               href={studio.bookingUrl}
               data-cursor="Book"
-              className="group inline-flex items-center gap-3 bg-bg text-ink-deep px-8 py-5 text-[1rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-bg"
+              className="group inline-flex items-center gap-3 bg-ink text-ink-deep px-8 py-5 text-[1rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-ink"
             >
               <span className="relative overflow-hidden inline-block">
                 <span className="inline-block transition-transform duration-300 ease-[var(--ease-quart)] group-hover:-translate-y-full">
@@ -119,7 +119,7 @@ export function FinalCta() {
             <span className="sr-only">{studio.founderName}, Founder</span>
           </Magnetic>
 
-          <p className="text-[0.8125rem] tracking-[0.06em] uppercase text-bg/55">
+          <p className="text-[0.8125rem] tracking-[0.06em] uppercase text-ink/55">
             — {studio.founderName}, {studio.founderRole}
           </p>
         </div>

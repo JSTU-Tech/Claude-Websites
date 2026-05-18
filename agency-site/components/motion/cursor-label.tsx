@@ -68,7 +68,7 @@ export function CursorLabel() {
           scale: label ? 1 : 0.85,
         }}
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-        className="bg-accent text-bg px-3 py-1.5 text-[0.6875rem] tracking-[0.08em] uppercase font-medium translate-x-4 translate-y-4"
+        className="bg-accent text-ink px-3 py-1.5 text-[0.6875rem] tracking-[0.08em] uppercase font-medium translate-x-4 translate-y-4"
       >
         {label ?? ""}
       </motion.div>

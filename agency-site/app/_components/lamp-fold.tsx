@@ -19,7 +19,7 @@ export function LampFold() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true, amount: 0.4 }}
-        className="eyebrow text-bg/60 mb-6"
+        className="eyebrow text-ink/60 mb-6"
       >
         Pricing in one line
       </motion.p>
@@ -29,7 +29,7 @@ export function LampFold() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.45, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true, amount: 0.4 }}
-        className="font-display font-normal text-center text-bg leading-[0.98] tracking-[-0.025em] max-w-[18ch] mx-auto"
+        className="font-display font-normal text-center text-ink leading-[0.98] tracking-[-0.025em] max-w-[18ch] mx-auto"
         style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
       >
         One quote. One project.
@@ -42,7 +42,7 @@ export function LampFold() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true, amount: 0.4 }}
-        className="mt-8 text-bg/75 max-w-[52ch] text-center"
+        className="mt-8 text-ink/75 max-w-[52ch] text-center"
         style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
       >
         I quote the project, fix the price, and ship it. No monthly invoices,
@@ -60,7 +60,7 @@ export function LampFold() {
         <Link
           href={studio.bookingUrl}
           data-cursor="Book"
-          className="group inline-flex items-center gap-3 bg-bg text-ink-deep px-7 py-3.5 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-bg"
+          className="group inline-flex items-center gap-3 bg-ink text-ink-deep px-7 py-3.5 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-ink"
         >
           Get a quote
           <span

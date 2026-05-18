@@ -54,7 +54,7 @@ export function SitePreviewFold() {
 
           {/* Faux site composition — editorial type and a single big stat */}
           <div className="flex-1 grid grid-cols-12 grid-rows-6 gap-px bg-rule">
-            <div className="col-span-12 row-span-4 bg-bg p-8 md:p-14 flex flex-col justify-end">
+            <div className="col-span-12 row-span-4 bg-paper p-8 md:p-14 flex flex-col justify-end">
               <span className="eyebrow mb-3">Trades · Bristol &amp; Bath</span>
               <p
                 className="font-display font-normal text-ink leading-[0.98] tracking-[-0.02em] max-w-[20ch]"
@@ -72,7 +72,7 @@ export function SitePreviewFold() {
                 £284k
               </span>
             </div>
-            <div className="col-span-4 row-span-2 bg-bg p-5 flex flex-col justify-between">
+            <div className="col-span-4 row-span-2 bg-paper p-5 flex flex-col justify-between">
               <span className="eyebrow">Build time</span>
               <span className="text-ink text-[0.9375rem]">
                 28 days, kick-off to live

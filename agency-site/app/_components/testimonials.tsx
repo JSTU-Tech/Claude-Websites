@@ -31,7 +31,7 @@ const all: ColumnTestimonial[] = [
     role: "GM, The Wickham (concept)",
   },
   {
-    text: "Every enquiry that lands now is pre-qualified. I spend half the time on phone calls and twice as many turn into clients.",
+    text: "Every enquiry that lands is the right one. I spend half the time on phone calls and twice as many turn into clients.",
     image: "",
     name: "Aleks H.",
     role: "Director, Hatch & Co. (concept)",

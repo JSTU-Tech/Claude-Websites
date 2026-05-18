@@ -41,7 +41,7 @@ export function ContactFormFallback() {
 
       <button
         type="submit"
-        className="self-start mt-2 inline-flex items-center gap-3 bg-accent text-bg px-6 py-3.5 text-[0.9375rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-ink"
+        className="self-start mt-2 inline-flex items-center gap-3 bg-accent text-ink px-6 py-3.5 text-[0.9375rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-ink"
       >
         {state === "sent" ? "Sending in your mail app…" : "Send"}
         <span aria-hidden="true">&rarr;</span>

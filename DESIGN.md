@@ -33,30 +33,30 @@ The site should read as "the founder operates at a different level" within 3 sec
 
 ---
 
-## 3. Colour palette — Slate & Sage
+## 3. Colour palette — Forest & Bone (dark-first)
 
-Base tokens locked. UK-business calm; modern but not corporate-blue; warm cream + deep ink + forest-green signal accent. Don't add tones without updating this section.
+Site is dark-first as of 2026-05-18. Founder feedback: cream contrast was breaking the editorial cohesion. Now: ink-deep page background, bone type, forest-green primary accent that pops on dark.
 
 ```
---bg:         #F2F0EA   /* clean warm cream, page background */
---bg-deep:    #E7E2D6   /* deeper sand, secondary surfaces / banding */
---paper:      #FBF8F2   /* lifted paper tone for cards on bg */
---ink:        #131310   /* near-black, all text */
---ink-deep:   #08070A   /* deep ink, inverted sections (case study + final CTA) */
---accent:     #18433B   /* deep forest green — CTAs, key numbers, link underlines */
---accent-soft:#6BA38B   /* sage — accent on dark backgrounds, ornaments */
---mineral:    #2B3C3A   /* deep eucalyptus, reserved for future use */
---muted:      #6F6C66   /* neutral grey, secondary text */
---rule:       #1313101A /* 10% ink hairlines */
+--bg:         #0A0908   /* default page bg — deep ink */
+--bg-deep:    #14120E   /* lifted banding bg (kinetic strip, pricing) */
+--paper:      #1E1B14   /* card surface on bg */
+--ink:        #F2F0EA   /* bone — default text colour */
+--ink-deep:   #04030B   /* deepest dark — rare takeover sections (case study, lamp, final-CTA) */
+--accent:     #2A7A66   /* brighter forest — primary signal, pops on dark */
+--accent-soft:#6BA38B   /* sage — secondary accent, hover, ornamental */
+--mineral:    #2B3C3A   /* deep eucalyptus, reserved */
+--muted:      #8C8980   /* lighter neutral grey, readable on dark */
+--rule:       #F2F0EA1A /* 10% bone hairlines on dark */
 ```
 
 **Rules:**
-- Forest green (`--accent`) is the *only* signal colour. It appears on CTAs, key numbers, link underlines, and the single editorial flourish per section. Don't dilute it.
-- Sage (`--accent-soft`) is for inverted (dark) sections only — it's the accent colour on `--ink-deep`. Never use it on cream.
-- `--mineral` and other future tones are *section-level* moves — entire inverted blocks — never accents on top of cream.
-- No gradients on type. No gradient buttons. Atmospheric gradients are allowed only behind a hero treatment, only in palette colours, never multi-hue.
+- Brighter forest (`--accent`) is the *only* signal colour. It appears on CTAs, key numbers, link underlines, and the single editorial flourish per section. Don't dilute it.
+- Sage (`--accent-soft`) is the secondary accent — for hover states, the lamp glow, the underline draw on inverted heroes. Use sparingly.
+- `--mineral` and other future tones are *section-level* moves — entire alternative-tone blocks — never accents on top of bg.
+- No gradients on type. No gradient buttons. Atmospheric gradients (radial wash behind hero, subtle vertical fade for readability) are allowed only in palette colours, never multi-hue, never rainbow.
 - No pure white. No pure black. No neon. No corporate blue.
-- Photography is warm-toned (slight cream tint), never cool/blue.
+- Photography is warm-tinted, never cool/blue. Treat photos with a slight desaturation so they sit on the dark page.
 
 ### §3a. Graphics
 
@@ -231,14 +231,18 @@ $ → £
 "gotten" → "got"
 ```
 
-### Hero headline (locked)
+### Hero headline (locked — updated 2026-05-18)
 
-> **I build websites that turn local searches into booked jobs.**
+> **Websites that pay for themselves.**
+
+Short. On-product (we sell websites, full stop). No lead-gen lift. The 60–90 day payback that earned the prior headline lives in the sub.
 
 Sub-headline:
-> Most small business sites lose customers before they ever pick up the phone. Mine don't. I work with trades, hospitality, and professional services to ship sites that pay for themselves in 60–90 days.
+> Most small business sites lose visitors in the first three seconds. Mine don't. Websites for [cycling vertical] across the UK — built in four weeks, in profit by ninety days.
 
 CTA: **Book a call** (not "Get Started", not "Schedule a discovery consultation").
+
+**Scope rule:** the studio only sells websites. Don't write copy that implies lead generation, ads, social, SEO retainers, branding, or any other service. Every outcome stated on the site must be a direct result of the website itself.
 
 ### Founder voice samples
 

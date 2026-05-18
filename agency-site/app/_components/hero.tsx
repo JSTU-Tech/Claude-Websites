@@ -156,7 +156,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       aria-labelledby="hero-heading"
-      className="relative bg-ink-deep text-bg overflow-hidden min-h-[100svh] flex flex-col px-6 md:px-10 pt-10 md:pt-14 pb-10"
+      className="relative bg-ink-deep text-ink overflow-hidden min-h-[100svh] flex flex-col px-6 md:px-10 pt-10 md:pt-14 pb-10"
     >
       {/* WebGL canvas behind everything */}
       <canvas
@@ -170,16 +170,16 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-deep/40 via-transparent to-ink-deep/70"
       />
       {/* Editorial hairline frame echoing the case study page */}
-      <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-bg/10" />
+      <div className="pointer-events-none absolute inset-x-6 md:inset-x-10 top-6 md:top-10 bottom-6 md:bottom-10 border border-ink/10" />
 
       <div className="relative flex-1 flex flex-col">
         {/* Eyebrow row */}
         <div className="flex items-baseline justify-between pt-2">
-          <motion.p className="eyebrow text-bg/55" {...reveal(0.05)}>
+          <motion.p className="eyebrow text-ink/55" {...reveal(0.05)}>
             Studio of {studio.founderName}, {studio.year}&nbsp;—
           </motion.p>
           <motion.p
-            className="eyebrow tabular-nums text-bg/55"
+            className="eyebrow tabular-nums text-ink/55"
             {...reveal(0.1)}
           >
             Index / 01
@@ -189,7 +189,7 @@ export function Hero() {
         {/* Display headline */}
         <h1
           id="hero-heading"
-          className="font-display font-normal mt-14 md:mt-20 lg:mt-24 text-bg"
+          className="font-display font-normal mt-14 md:mt-20 lg:mt-24 text-ink"
           style={{
             fontSize: "var(--text-hero)",
             lineHeight: 0.95,
@@ -198,11 +198,11 @@ export function Hero() {
         >
           <RevealLines>
             {[
-              <>I build websites that turn</>,
-              <>local searches into</>,
+              <>Websites that pay</>,
               <>
+                for{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">booked jobs.</span>
+                  <span className="relative z-10">themselves.</span>
                   <motion.span
                     aria-hidden="true"
                     className="absolute inset-x-0 bottom-[-0.04em] h-[0.07em] bg-accent-soft origin-left"
@@ -211,7 +211,7 @@ export function Hero() {
                     transition={{
                       duration: 0.8,
                       ease: EASE_QUART,
-                      delay: prefersReduced ? 0 : 1.15,
+                      delay: prefersReduced ? 0 : 1.0,
                     }}
                   />
                 </span>
@@ -222,18 +222,18 @@ export function Hero() {
 
         {/* Lower meta band */}
         <motion.div
-          className="mt-auto pt-8 md:pt-10 border-t border-bg/15"
+          className="mt-auto pt-8 md:pt-10 border-t border-ink/15"
           {...reveal(1.35)}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 pt-8 md:pt-10">
           <motion.p
-            className="md:col-span-7 lg:col-span-6 text-bg/85 max-w-[60ch]"
+            className="md:col-span-7 lg:col-span-6 text-ink/85 max-w-[60ch]"
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             {...reveal(1.4)}
           >
-            Most small business sites lose customers before they ever pick up
-            the phone. Mine don&apos;t. I build sites for{" "}
+            Most small business sites lose visitors in the first three
+            seconds. Mine don&apos;t. Websites for{" "}
             <AnimatedTextCycle
               className="text-accent-soft font-medium"
               words={[
@@ -245,7 +245,7 @@ export function Hero() {
                 "consultants",
               ]}
             />{" "}
-            across the UK that pay for themselves in 60–90 days.
+            across the UK — built in four weeks, in profit by ninety days.
           </motion.p>
 
           <motion.div
@@ -256,7 +256,7 @@ export function Hero() {
               <Link
                 href={studio.bookingUrl}
                 data-cursor="Book"
-                className="group inline-flex items-center gap-3 bg-bg text-ink-deep px-8 py-4 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-bg"
+                className="group inline-flex items-center gap-3 bg-ink text-ink-deep px-8 py-4 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-ink"
               >
                 <span className="relative overflow-hidden inline-block">
                   <span className="inline-block transition-transform duration-300 ease-[var(--ease-quart)] group-hover:-translate-y-full">
@@ -278,16 +278,16 @@ export function Hero() {
               </Link>
             </Magnetic>
 
-            <div className="flex items-center gap-3 text-[0.875rem] text-bg/70">
+            <div className="flex items-center gap-3 text-[0.875rem] text-ink/70">
               <span
                 aria-hidden="true"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-bg/25 font-display text-[0.8125rem] text-bg"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-ink/25 font-display text-[0.8125rem] text-ink"
               >
                 JS
               </span>
               <span>
                 {studio.founderName},{" "}
-                <span className="text-bg">{studio.founderRole}</span>
+                <span className="text-ink">{studio.founderRole}</span>
               </span>
             </div>
           </motion.div>
