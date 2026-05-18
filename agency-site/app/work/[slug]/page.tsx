@@ -7,6 +7,7 @@ import {
   RevealItem,
 } from "@/components/motion/reveal-section";
 import { VerticalIcon } from "@/components/motion/vertical-icon";
+import { ContainerScroll } from "@/components/motion/container-scroll";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 
 export function generateStaticParams() {
@@ -100,6 +101,74 @@ export default async function CaseStudyPage({
           </div>
         </div>
       </header>
+
+      {/* BIG VISUAL — ContainerScroll 3D card reveal */}
+      <section aria-label={`${study.client} site preview`}>
+        <ContainerScroll
+          titleComponent={
+            <div className="flex flex-col gap-3">
+              <span className="eyebrow">Live site preview</span>
+              <h2
+                className="font-display font-normal text-ink leading-[1.02] tracking-[-0.02em] max-w-[18ch] mx-auto"
+                style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+              >
+                The work, in situ.
+              </h2>
+            </div>
+          }
+        >
+          <div className="relative h-full w-full flex flex-col">
+            {/* Faux browser chrome */}
+            <div className="flex items-center justify-between border-b border-rule px-4 py-2.5">
+              <div className="flex items-center gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-rule" />
+                <span className="h-2.5 w-2.5 rounded-full bg-rule" />
+                <span className="h-2.5 w-2.5 rounded-full bg-rule" />
+              </div>
+              <span className="text-[0.6875rem] tracking-[0.06em] uppercase text-muted">
+                {study.slug}.co.uk
+              </span>
+              <span className="h-3 w-3" />
+            </div>
+
+            {/* Inner editorial composition — placeholder until a real screenshot exists */}
+            <div className="flex-1 grid grid-cols-12 grid-rows-6 gap-px bg-rule">
+              <div className="col-span-12 row-span-4 bg-bg px-8 py-10 md:px-14 md:py-16 flex flex-col justify-end">
+                <span className="eyebrow mb-3">{study.verticalLabel}</span>
+                <p
+                  className="font-display font-normal text-ink leading-[0.98] tracking-[-0.02em] max-w-[20ch]"
+                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.25rem)" }}
+                >
+                  {study.title}
+                </p>
+              </div>
+              <div className="col-span-4 row-span-2 bg-paper p-5 flex flex-col justify-between">
+                <span className="eyebrow">Outcome</span>
+                <span
+                  className="font-display font-normal text-accent leading-none tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)" }}
+                >
+                  {study.outcome.value}
+                </span>
+              </div>
+              <div className="col-span-4 row-span-2 bg-bg p-5 flex flex-col justify-between">
+                <span className="eyebrow">Client</span>
+                <span className="text-ink text-[0.9375rem]">
+                  {study.client}
+                </span>
+              </div>
+              <div className="col-span-4 row-span-2 bg-paper p-5 flex items-center justify-end">
+                <span
+                  aria-hidden="true"
+                  className="text-ink/40 text-[1.25rem]"
+                >
+                  &rarr;
+                </span>
+              </div>
+            </div>
+          </div>
+        </ContainerScroll>
+      </section>
 
       {/* THE PROBLEM */}
       <Block index="02" label="The problem">
