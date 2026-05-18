@@ -46,7 +46,13 @@ If you find yourself starting straight from code, stop and run the skill first.
 - **Components**: colocated. Page-scoped components live in `app/<route>/_components/`. Shared primitives in `components/`. Motion primitives in `components/motion/`.
 - **Styling**: Tailwind v4 only. Theme tokens in `app/globals.css` `@theme inline`. No CSS modules, no styled-components.
 - **Animation imports**: `import { motion } from "motion/react"` (Motion v12 path). Not `framer-motion`. Components pasted from external snippets that use `framer-motion` must be migrated on entry.
-- **House primitives — use in every new site, not just this one**: `SplineScene` (`components/spline-scene.tsx`), `ContainerScroll` (`components/motion/container-scroll.tsx`), and `ShaderHero` (`components/motion/shader-hero.tsx`). All three are part of the studio's standard kit — wire them into the appropriate moment on each new build (Spline for a 3D editorial mark; ContainerScroll for a featured case study / screen reveal; ShaderHero for an atmospheric WebGL fold). External snippets must be migrated from `framer-motion` → `motion/react` and recoloured to the project's palette before they ship — never paste tailwind classes like `bg-black`, `from-orange-500`, or `hover:scale-105` from a snippet without retoning.
+- **House primitives — use in every new site, not just this one**: five components form the studio's standard kit. Wire each one into the appropriate moment on every new build, not just this project.
+  - `SplineScene` (`components/spline-scene.tsx`) — single editorial 3D object, lazy-loaded.
+  - `ContainerScroll` (`components/motion/container-scroll.tsx`) — scroll-driven screen-tilt reveal for a featured case study / flagship moment.
+  - `ShaderHero` (`components/motion/shader-hero.tsx`) — WebGL2 fragment-shader atmospheric fold with type overlay (forest-green nebula). Self-contained section with primary + secondary CTAs.
+  - `WebGLShader` (`components/motion/webgl-shader.tsx`) — Three.js RGB-scanline background layer for atmospheric sections. Absolute-positioned inside its parent; pauses when off-screen.
+  - `TestimonialsColumn` (`components/motion/testimonials-column.tsx`) — vertical auto-scrolling testimonial marquee column. Use 2–3 stacked at different durations for a wall.
+  - External snippets (e.g. 21st.dev, Aceternity) must be migrated from `framer-motion` → `motion/react` and recoloured to the project palette before they ship — never paste classes like `bg-black`, `from-orange-500`, `hover:scale-105` without retoning.
 - **GSAP**: import only inside `"use client"` components, lazy-init inside `useEffect`/`useGSAP`. ScrollTrigger goes through the `gsap-scrolltrigger` skill's recipes — don't freelance it.
 - **shadcn**: install primitives only when needed (`pnpm dlx shadcn@latest add button`). Override radius, color, type classes on every component before merging.
 - **Images**: `next/image` only. AVIF preferred. `priority` on hero only.

@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { studio } from "@/lib/studio";
 import { Magnetic } from "@/components/motion/magnetic";
 import { RevealLines } from "@/components/motion/reveal-lines";
+import { WebGLShader } from "@/components/motion/webgl-shader";
 
 /**
  * Final CTA — closing fold. Mirrors the hero's pageload choreography on
@@ -33,8 +34,15 @@ export function FinalCta() {
   return (
     <section
       aria-labelledby="final-heading"
-      className="bg-ink-deep text-bg px-6 md:px-10 py-28 md:py-40"
+      className="relative bg-ink-deep text-bg px-6 md:px-10 py-28 md:py-40 overflow-hidden"
     >
+      <WebGLShader className="opacity-60" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-ink-deep/40 via-ink-deep/10 to-ink-deep/40 pointer-events-none"
+      />
+
+      <div className="relative">
       <motion.p className="eyebrow text-bg/55" {...fade(0)}>
         Closing — Book a call
       </motion.p>
@@ -115,6 +123,7 @@ export function FinalCta() {
           </p>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }

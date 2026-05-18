@@ -97,6 +97,24 @@ body {
   transform: scaleX(1);
 }
 
+/* Top + bottom fade mask for marquee columns */
+.mask-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
 /* Spline loader (used by SplineScene fallback) */
 .loader {
   width: 28px;

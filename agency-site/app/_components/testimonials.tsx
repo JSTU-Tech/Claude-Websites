@@ -1,97 +1,110 @@
+"use client";
+
 import { FoldMark } from "@/components/motion/fold-mark";
 import {
-  RevealSection,
-  RevealItem,
-} from "@/components/motion/reveal-section";
+  TestimonialsColumn,
+  type ColumnTestimonial,
+} from "@/components/motion/testimonials-column";
 
 /**
- * Testimonials — pull-quote style, anti-grid. Three quotes from the
- * concept projects. Editorial set quotation mark in oxblood as the
- * single accent. Labelled clearly as concept-project quotes until real
- * client quotes exist.
+ * Testimonials — replaced the static anti-grid pull-quotes with the
+ * TestimonialsColumn house primitive (auto-scrolling vertical marquee).
+ * Three columns at staggered durations so they read as a wall, not a
+ * single track. Concept-project quotes labelled as such until real
+ * client photos exist (avatars fall back to initials).
  *
- * Reference: editorial pull-quotes in print magazines; Pentagram client
- * testimonial spreads.
+ * Reference: Linear / Vercel testimonial walls, but recoloured to the
+ * Slate & Sage palette with hairline-square cards instead of glow chips.
  */
 
-const quotes = [
+const all: ColumnTestimonial[] = [
   {
-    body: "The site paid for itself in seven weeks. I get more calls than I can handle.",
+    text: "The site paid for itself in seven weeks. I get more calls than I can handle and we hired a second engineer in month six.",
+    image: "",
     name: "Daniel R.",
     role: "Owner, Saltworks Plumbing (concept)",
-    span: "md:col-span-7",
-    offset: "md:col-start-1",
-    align: "left" as const,
   },
   {
-    body: "First time my booking page actually felt like the rest of the restaurant. Direct reservations doubled.",
+    text: "First time my booking page actually felt like the rest of the restaurant. Direct reservations doubled and the aggregator fees are now a rounding error.",
+    image: "",
     name: "Mira J.",
     role: "GM, The Wickham (concept)",
-    span: "md:col-span-6",
-    offset: "md:col-start-7",
-    align: "right" as const,
   },
   {
-    body: "Every enquiry that lands now is pre-qualified. I spend half the time on phone calls.",
+    text: "Every enquiry that lands now is pre-qualified. I spend half the time on phone calls and twice as many turn into clients.",
+    image: "",
     name: "Aleks H.",
     role: "Director, Hatch & Co. (concept)",
-    span: "md:col-span-8",
-    offset: "md:col-start-3",
-    align: "left" as const,
+  },
+  {
+    text: "Two weeks from kick-off to live. No back and forth on scope, no surprise invoices, no agency-speak. Just the site that we agreed in the brief.",
+    image: "",
+    name: "Sarah W.",
+    role: "Owner, Cotswold Joinery (concept)",
+  },
+  {
+    text: "Phone bookings up 60% in the first three months. The audit report alone was worth more than what we eventually paid for the rebuild.",
+    image: "",
+    name: "Tom B.",
+    role: "Manager, Bath Auto Repair (concept)",
+  },
+  {
+    text: "He told us upfront which sections wouldn't move the numbers, and refused to charge for them. That's how I knew this would be different.",
+    image: "",
+    name: "Priya N.",
+    role: "Partner, Severn Consulting (concept)",
   },
 ];
+
+const col1 = all.slice(0, 2);
+const col2 = all.slice(2, 4);
+const col3 = all.slice(4, 6);
 
 export function Testimonials() {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="px-6 md:px-10 py-24 md:py-32"
+      className="relative px-6 md:px-10 py-24 md:py-32"
     >
       <FoldMark index="06" label="In their words" />
-
       <h2 id="testimonials-heading" className="sr-only">
         Testimonials
       </h2>
 
-      <RevealSection
-        className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-24"
-        amount={0.1}
-      >
-        {quotes.map((q, i) => (
-          <RevealItem
-            key={i}
-            className={[
-              "flex flex-col gap-5",
-              q.span,
-              q.offset,
-              q.align === "right" ? "md:text-right" : "",
-            ].join(" ")}
+      <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-10 items-start">
+        <div className="md:col-span-4 flex flex-col gap-5">
+          <p
+            className="font-display font-normal text-ink leading-[1.05] tracking-[-0.015em] max-w-[20ch]"
+            style={{ fontSize: "var(--text-h2)" }}
           >
-            <span
-              aria-hidden="true"
-              className="font-display text-accent leading-none select-none"
-              style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}
-            >
-              &ldquo;
-            </span>
-            <p
-              className="font-display font-normal text-ink leading-[1.1] tracking-[-0.015em] -mt-6"
-              style={{ fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}
-            >
-              {q.body}
-            </p>
-            <div
-              className={[
-                "flex flex-col gap-1 mt-2",
-                q.align === "right" ? "md:items-end" : "",
-              ].join(" ")}
-            >
-              <span className="text-[0.875rem] text-ink/90">{q.name}</span>
-              <span className="eyebrow">{q.role}</span>
-            </div>
-          </RevealItem>
-        ))}
-      </RevealSection>
+            Three concept projects.
+            <br />
+            Six honest quotes.
+          </p>
+          <p
+            className="text-ink/90 max-w-[42ch]"
+            style={{ fontSize: "var(--text-body)", lineHeight: 1.55 }}
+          >
+            Each one labelled (concept) until the project ships and the owner
+            signs off the real quote. We won&apos;t fake testimonials and
+            we won&apos;t paraphrase live clients to make them sound shinier.
+          </p>
+        </div>
+
+        <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[640px] overflow-hidden mask-fade">
+          <TestimonialsColumn testimonials={col1} duration={26} />
+          <TestimonialsColumn
+            testimonials={col2}
+            duration={32}
+            className="hidden sm:block"
+          />
+          <TestimonialsColumn
+            testimonials={col3}
+            duration={22}
+            className="hidden lg:block"
+          />
+        </div>
+      </div>
     </section>
   );
 }

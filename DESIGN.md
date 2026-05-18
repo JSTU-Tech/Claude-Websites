@@ -71,8 +71,10 @@ Graphics are allowed and encouraged when they replace generic stock or carry mea
 - **Spline 3D scenes** (via `components/spline-scene.tsx`) — a single editorial 3D object per site, lazy-loaded, monochrome or palette-coloured. Never decorative blobs.
 - **ContainerScroll 3D card reveal** (via `components/motion/container-scroll.tsx`) — scroll-driven tilt of a screen-shaped card showing the live site preview. Use for the case study "big visual" or a flagship feature reveal.
 - **ShaderHero atmospheric fold** (via `components/motion/shader-hero.tsx`) — WebGL2 fragment-shader nebula on `--ink-deep`, palette-tinted clouds. Hero or mid-page atmospheric section. Pauses rendering when scrolled out of view to spare battery + GPU.
+- **WebGLShader background layer** (via `components/motion/webgl-shader.tsx`) — Three.js RGB-scanline shader that lives inside a parent section as an atmospheric background. Pairs with high-contrast typographic foreground. Pauses when off-screen.
+- **TestimonialsColumn marquee** (via `components/motion/testimonials-column.tsx`) — vertical auto-scrolling testimonial column. Use 2–3 stacked at different durations behind a top/bottom fade mask for a marquee wall effect.
 
-`SplineScene`, `ContainerScroll` and `ShaderHero` are the **house kit** — wire each one into every new studio build at the appropriate moment, not just this one. They're the differentiators.
+`SplineScene`, `ContainerScroll`, `ShaderHero`, `WebGLShader` and `TestimonialsColumn` are the **house kit** — wire each one into every new studio build at the appropriate moment, not just this one. They're the differentiators.
 
 Banned graphic categories listed in §9 still apply (no 3D blobs, no AI-generated abstract gradients, no stock laptop-with-charts).
 
