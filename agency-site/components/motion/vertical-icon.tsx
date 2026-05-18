@@ -21,16 +21,19 @@ const ICONS: Record<
     viewBox: "0 0 120 120",
     ariaLabel: "Spanner mark",
     paths: [
-      // Box-end ring (outer circle) — top-left corner
-      "M 16 30 a 14 14 0 1 0 28 0 a 14 14 0 1 0 -28 0",
-      // Box-end ring (inner hole)
-      "M 23 30 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0",
-      // Shaft — diagonal from ring to open jaw
-      "M 40 40 L 82 82",
-      // Open-jaw fork — diamond-shaped wrench head at bottom-right
-      "M 82 82 L 96 70 L 108 82 L 94 96 Z",
-      // Inner notch of the open jaw — suggests the gripping surfaces
-      "M 92 84 L 98 90",
+      // Double-ended open-jaw spanner running diagonally from top-left
+      // to bottom-right. Each jaw has a V-notch on the outer edge —
+      // the recognisable "open wrench" silhouette. Built horizontally
+      // then rotated +45° around the centre of the viewBox.
+      //
+      // Top-left jaw — outline traces around the outer perimeter and
+      // through the notch peak, ending where the handle joins.
+      "M 44 39 L 47 36 L 39 28 L 36 30 L 37 37 L 30 36 L 28 39 L 36 47 L 39 44",
+      // Bottom-right jaw — mirror of the top-left jaw.
+      "M 81 76 L 84 73 L 93 81 L 90 84 L 83 83 L 84 90 L 81 93 L 73 84 L 76 81",
+      // Handle — two parallel diagonal strokes between the jaw joins.
+      "M 44 39 L 81 76",
+      "M 39 44 L 76 81",
     ],
   },
   hospitality: {
