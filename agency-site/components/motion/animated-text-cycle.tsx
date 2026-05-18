@@ -28,7 +28,7 @@ export default function AnimatedTextCycle({
   const [mounted, setMounted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [width, setWidth] = useState<string>("auto");
-  const measureRef = useRef<HTMLDivElement>(null);
+  const measureRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => setMounted(true), []);
 
@@ -77,19 +77,20 @@ export default function AnimatedTextCycle({
 
   return (
     <>
-      {/* Hidden measurement layer */}
-      <div
+      {/* Hidden measurement layer — span (not div) so it can live inside
+          a <p>; position:absolute removes it from flow either way. */}
+      <span
         ref={measureRef}
         aria-hidden="true"
         className="absolute opacity-0 pointer-events-none"
-        style={{ visibility: "hidden" }}
+        style={{ visibility: "hidden", display: "inline-block" }}
       >
         {words.map((word, i) => (
           <span key={i} className={className}>
             {word}
           </span>
         ))}
-      </div>
+      </span>
 
       {/* Visible cycling word */}
       <motion.span
