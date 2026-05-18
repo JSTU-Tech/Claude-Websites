@@ -62,12 +62,16 @@ Base tokens locked. UK-business calm; modern but not corporate-blue; warm cream 
 
 Graphics are allowed and encouraged when they replace generic stock or carry meaning. Approved categories:
 
-- **Typographic ornaments** — large Boska italic `&`, `§`, `¶`, fractional numerals used as section anchors.
-- **Custom monogram / printer's mark** for "Stuckey." that recurs at fold breaks.
-- **Single-line editorial drawings** for the three verticals (trades / hospitality / professional services). Vector, ink-color, hand-drawn feel.
+- **Typographic ornaments** — large italic `&`, `§`, `¶`, fractional numerals used as section anchors.
+- **Custom monogram / printer's mark** for the studio wordmark that recurs at fold breaks.
+- **Single-line editorial drawings** for verticals (e.g. trades / hospitality / professional services). Vector, ink-coloured, hand-drawn feel.
 - **Process diagrams** for the 4-step section — schematic, ink-line.
 - **Real photography** when shot specifically for the studio (founder portrait, work-in-progress shots, deliverable mockups). Never Unsplash.
 - **Animated SVG ornaments** that respond to scroll position or cursor (subtle, not gimmicks).
+- **Spline 3D scenes** (via `components/spline-scene.tsx`) — a single editorial 3D object per site, lazy-loaded, monochrome or palette-coloured. Never decorative blobs.
+- **ContainerScroll 3D card reveal** (via `components/motion/container-scroll.tsx`) — scroll-driven tilt of a screen-shaped card showing the live site preview. Use for the case study "big visual" or a flagship feature reveal.
+
+`SplineScene` and `ContainerScroll` are part of the **house kit** — wire both into every new studio build at their appropriate moment, not just this one. They're the differentiators.
 
 Banned graphic categories listed in §9 still apply (no 3D blobs, no AI-generated abstract gradients, no stock laptop-with-charts).
 
