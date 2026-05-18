@@ -80,7 +80,7 @@ export function RevealItem({
   children?: ReactNode;
   className?: string;
   style?: CSSProperties;
-  as?: "div" | "p" | "h2" | "h3" | "span" | "li";
+  as?: "div" | "p" | "h1" | "h2" | "h3" | "span" | "li" | "blockquote";
 }) {
   const MotionTag = motion[as] as typeof motion.div;
   return (
