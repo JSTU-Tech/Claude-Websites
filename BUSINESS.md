@@ -2,6 +2,8 @@
 
 This is the operating model. Pricing, services, target buyers. All decisions reference this file. Update only with explicit approval.
 
+**Tool-priority reminder:** When writing copy or building sections, search the Magic MCP (21st.dev) for patterns *first*, invoke the frontend-design / ui-ux-pro-max / motion-framer skills *before* authoring, and pull live docs via context7 for any API touched. Reference this file exclusively for prices, tiers, and target verticals. Full workflow in CLAUDE.md.
+
 ---
 
 ## 1. Who I sell to
