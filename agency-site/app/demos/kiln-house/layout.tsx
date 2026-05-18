@@ -60,8 +60,11 @@ export default function KilnHouseLayout({ children }: { children: ReactNode }) {
           "--kiln-ink": "#1C1814",
           "--kiln-ink-soft": "#3A332A",
           "--kiln-accent": "#B0492A",
+          // Darkened from #8D7E66 → #6E6451 on 2026-05-18 to pass WCAG AA
+          // (4.5:1) for body-size text on bone backgrounds. Used for menu
+          // course notes, eyebrow labels, story chapter rail, disclaimer.
           "--kiln-accent-soft": "#D77A56",
-          "--kiln-muted": "#8D7E66",
+          "--kiln-muted": "#6E6451",
           "--kiln-rule": "#1C18141A",
         } as React.CSSProperties
       }

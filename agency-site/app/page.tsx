@@ -1,7 +1,6 @@
 import { Hero } from "./_components/hero";
 import { KineticSection } from "./_components/kinetic-section";
 import { ProofBar } from "./_components/proof-bar";
-import { SitePreviewFold } from "./_components/site-preview-fold";
 import { FeaturedCaseStudy } from "./_components/featured-case-study";
 import { WhoThisIsFor } from "./_components/who-this-is-for";
 import { Process } from "./_components/process";
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <KineticSection />
       <ProofBar />
-      <SitePreviewFold />
       <FeaturedCaseStudy />
       <WhoThisIsFor />
       <Process />
