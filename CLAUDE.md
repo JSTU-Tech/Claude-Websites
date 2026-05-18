@@ -49,7 +49,8 @@ If you find yourself starting straight from code, stop and run the skill first.
 - **GSAP**: import only inside `"use client"` components, lazy-init inside `useEffect`/`useGSAP`. ScrollTrigger goes through the `gsap-scrolltrigger` skill's recipes — don't freelance it.
 - **shadcn**: install primitives only when needed (`pnpm dlx shadcn@latest add button`). Override radius, color, type classes on every component before merging.
 - **Images**: `next/image` only. AVIF preferred. `priority` on hero only.
-- **Fonts**: load via `next/font/local` from `public/fonts/`. Display: **Boska** (Fontshare, variable 200–900 + italic). Body: **Switzer Variable** (Fontshare, axis 100–900 + italic). Exposed as `--font-display` and `--font-body` Tailwind v4 theme tokens. Never fall back to Google Fonts.
+- **Fonts**: load via `next/font/local` from `public/fonts/`. Display: **General Sans** (Fontshare, variable 200–700 + italic). Body: **Switzer Variable** (Fontshare, axis 100–900 + italic). Exposed as `--font-display` and `--font-body` Tailwind v4 theme tokens. Never fall back to Google Fonts. Boska files remain in `public/fonts/` but are not loaded — left in place for possible future flourish use only.
+- **Language**: British English throughout. £ not $, autumn not fall, maths not math, organise not organize. No quarter-talk (Q1/Q2/Q3/Q4) — say "this autumn" or "in the next three months."
 
 ## Workflow (apply to every section)
 

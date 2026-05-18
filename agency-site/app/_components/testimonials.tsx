@@ -69,13 +69,13 @@ export function Testimonials() {
           >
             <span
               aria-hidden="true"
-              className="font-display italic text-accent leading-none select-none"
+              className="font-display text-accent leading-none select-none"
               style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}
             >
               &ldquo;
             </span>
             <p
-              className="font-display italic font-extralight text-ink leading-[1.1] tracking-[-0.015em] -mt-6"
+              className="font-display font-normal text-ink leading-[1.1] tracking-[-0.015em] -mt-6"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}
             >
               {q.body}

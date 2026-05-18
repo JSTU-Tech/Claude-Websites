@@ -26,7 +26,7 @@ export function PricingSignal() {
         >
           <RevealItem
             as="h2"
-            className="md:col-span-8 font-display italic font-extralight leading-[0.98] tracking-[-0.02em]"
+            className="md:col-span-8 font-display font-normal leading-[0.98] tracking-[-0.02em]"
             style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
           >
             <span className="block text-ink">Projects from</span>

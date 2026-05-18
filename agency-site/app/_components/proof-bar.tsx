@@ -5,7 +5,7 @@ import {
 
 const proof = {
   eyebrow: "Proof — concept project",
-  number: "$284k",
+  number: "£284k",
   caption: "tracked in new bookings",
   qualifier: "Nine months live. Numbers verifiable in the case study below.",
 } as const;
@@ -28,7 +28,7 @@ export function ProofBar() {
 
         <RevealItem
           as="p"
-          className="md:col-span-6 font-display italic font-extralight text-accent leading-[0.95] tracking-[-0.02em]"
+          className="md:col-span-6 font-display font-normal text-accent leading-[0.95] tracking-[-0.02em]"
           style={{ fontSize: "var(--text-h1)" }}
         >
           {proof.number}{" "}

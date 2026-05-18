@@ -33,34 +33,30 @@ The site should read as "the founder operates at a different level" within 3 sec
 
 ---
 
-## 3. Color palette — Ink & Bone (base), expandable
+## 3. Colour palette — Slate & Sage
 
-Base tokens locked. The palette is a **chord, not a duet** — supplementary tones can be added when the section earns them. Every addition gets a token in `globals.css` and is reused, not one-off.
-
-```
---bg:        #F4F1EA   /* warm bone, page background */
---bg-deep:   #ECE6DA   /* deeper bone, secondary surfaces / banding */
---ink:       #171514   /* warm off-black, all text */
---accent:    #7A1F1B   /* oxblood, primary accent */
---muted:     #8A847B   /* warm grey, secondary text */
---rule:      #1715141A /* 10% ink for hairlines */
-```
-
-**Approved palette extensions** (use ONLY when a section earns them — never as decoration):
+Base tokens locked. UK-business calm; modern but not corporate-blue; warm cream + deep ink + forest-green signal accent. Don't add tones without updating this section.
 
 ```
---ink-deep:    #0B0908   /* near-black for inverted sections (case study takeover) */
---accent-soft: #B85A4E   /* tinted oxblood for graphics, ornaments, hover states */
---mineral:     #2B3C3A   /* deep eucalyptus, for one inverted section if needed */
---paper:       #FBF7EE   /* lifted paper tone for cards on bg */
+--bg:         #F2F0EA   /* clean warm cream, page background */
+--bg-deep:    #E7E2D6   /* deeper sand, secondary surfaces / banding */
+--paper:      #FBF8F2   /* lifted paper tone for cards on bg */
+--ink:        #131310   /* near-black, all text */
+--ink-deep:   #08070A   /* deep ink, inverted sections (case study + final CTA) */
+--accent:     #18433B   /* deep forest green — CTAs, key numbers, link underlines */
+--accent-soft:#6BA38B   /* sage — accent on dark backgrounds, ornaments */
+--mineral:    #2B3C3A   /* deep eucalyptus, reserved for future use */
+--muted:      #6F6C66   /* neutral grey, secondary text */
+--rule:       #1313101A /* 10% ink hairlines */
 ```
 
 **Rules:**
-- Oxblood (`--accent`) is the primary signal. It appears on CTAs, key numbers, link underlines, and the single editorial flourish per section. Don't dilute it.
-- Secondary tones (`--mineral`, `--ink-deep`) are *section-level* moves — an entire inverted block — never accents on top of bone.
-- No gradients on type. No gradient buttons. Atmospheric gradients are allowed (e.g., a soft radial wash *behind* a hero treatment) ONLY when the warm-toned palette is preserved.
-- No pure white. No pure black. No neon.
-- Photography is warm-toned (slight cream tint), not cool/blue.
+- Forest green (`--accent`) is the *only* signal colour. It appears on CTAs, key numbers, link underlines, and the single editorial flourish per section. Don't dilute it.
+- Sage (`--accent-soft`) is for inverted (dark) sections only — it's the accent colour on `--ink-deep`. Never use it on cream.
+- `--mineral` and other future tones are *section-level* moves — entire inverted blocks — never accents on top of cream.
+- No gradients on type. No gradient buttons. Atmospheric gradients are allowed only behind a hero treatment, only in palette colours, never multi-hue.
+- No pure white. No pure black. No neon. No corporate blue.
+- Photography is warm-toned (slight cream tint), never cool/blue.
 
 ### §3a. Graphics
 
@@ -82,12 +78,14 @@ Banned graphic categories listed in §9 still apply (no 3D blobs, no AI-generate
 Locked. Free for commercial use via fontshare.com. Files live in `agency-site/public/fonts/`.
 
 ```
-Display:  Boska           (variable axis 200–900 + italic — extralight italic for hero, regular for H2-H3)
+Display:  General Sans    (variable axis 200–700 + italic — regular weight for hero, medium for H2)
 Body:     Switzer         (variable axis 100–900 + italic; 400 body, 500 emphasis)
 Mono:     none loaded     (use ui-monospace system stack if needed for case-study metrics)
 ```
 
-Loaded via `next/font/local` and exposed as Tailwind v4 theme tokens: `--font-display` (Boska), `--font-body` (Switzer). Use `font-display` and `font-body` utility classes.
+General Sans is the upgrade from Boska italic. The brief was "less artsy, more UK business" — General Sans reads as modern, confident, used by the kind of agencies a SMB owner actually hires. Italics are reserved for the rare in-line emphasis, never as the default display style.
+
+Loaded via `next/font/local` and exposed as Tailwind v4 theme tokens: `--font-display` (General Sans), `--font-body` (Switzer). Use `font-display` and `font-body` utility classes. Boska files may stay in `public/fonts/` for now but are not referenced — do not import them.
 
 **Sizing scale** (rem):
 ```
@@ -193,13 +191,34 @@ Five pages. No more.
 
 ## 7. Copy direction
 
+**Language: British English.** This is a UK business selling to UK SMBs. Use British spellings (organisation, colour, optimise, enquiry, programme), British currency (£ not $), and plainspoken UK phrasing.
+
+**No quarter-talk, no SaaS-speak.** Don't say "Q3" or "this quarter" — say "this autumn" or "in the next three months." Don't say "leverage," "scale up," "stakeholders," "ecosystem." Talk like an actual British tradesperson would understand.
+
 ### Banned words/phrases
 
 ```
 crafting, craft (verb), elevate, bespoke, tailored, seamless,
 synergy, experiences, journey, tomorrow, next-generation,
 empower, unleash, supercharge, revolutionize, pixel-perfect,
+leverage (verb), scale up, stakeholders, ecosystem, solutions,
+Q1/Q2/Q3/Q4, "this quarter", "next quarter",
 "we" (when you mean "I"), "trusted by 1000+ companies"
+```
+
+### Americanisms to avoid
+
+```
+$ → £
+"math" → "maths"
+"organize" → "organise" (and -ize → -ise generally)
+"color" → "colour"
+"realize" → "realise"
+"sidewalk" → "pavement"
+"fall" (season) → "autumn"
+"vacation" → "holiday"
+"check" (verb for inspect) — keep "check" but not "checking-out" for buy
+"gotten" → "got"
 ```
 
 ### Hero headline (locked)
@@ -253,6 +272,7 @@ Every default Claude Code reaches for. Explicit bans:
 
 ### Fonts
 - Inter, Roboto, DM Sans, Manrope, Geist, Poppins, Outfit, Arial, any Google Sans-Serif default.
+- Boska italic as a *default display* — kept on disk for future flourish use only, never as the recurring headline font.
 
 ### Colors
 - Any purple → blue gradient

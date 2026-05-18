@@ -26,7 +26,7 @@ const study = {
   caseLabel: "Case 01 — Saltworks Plumbing (concept)",
   title: "From missing six calls a day to a waiting list.",
   statValue: 284,
-  statPrefix: "$",
+  statPrefix: "£",
   statSuffix: "k",
   statCaption: "tracked in new bookings, year one",
   quote: "The site paid for itself in seven weeks.",
@@ -161,7 +161,7 @@ export function FeaturedCaseStudy() {
           <h2
             id="case-heading"
             ref={titleRef}
-            className="font-display italic font-extralight mt-6 max-w-[24ch] tracking-[-0.02em]"
+            className="font-display font-normal mt-6 max-w-[24ch] tracking-[-0.02em]"
             style={{
               fontSize: "clamp(2.5rem, 6vw, 5.5rem)",
               lineHeight: 0.98,
@@ -176,7 +176,7 @@ export function FeaturedCaseStudy() {
               <div className="md:max-w-[50%] flex flex-col gap-3">
                 <span className="eyebrow text-bg/55">Outcome</span>
                 <p
-                  className="font-display italic font-extralight text-accent-soft leading-[0.95] tracking-[-0.03em]"
+                  className="font-display font-normal text-accent-soft leading-[0.95] tracking-[-0.03em]"
                   style={{ fontSize: "clamp(4rem, 10vw, 9rem)" }}
                 >
                   {study.statPrefix}
@@ -202,7 +202,7 @@ export function FeaturedCaseStudy() {
               >
                 <span className="eyebrow text-bg/55">Owner</span>
                 <p
-                  className="font-display italic font-extralight text-bg leading-[1.15]"
+                  className="font-display font-normal text-bg leading-[1.15]"
                   style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.25rem)" }}
                 >
                   &ldquo;{study.quote}&rdquo;

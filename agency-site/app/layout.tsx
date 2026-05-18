@@ -4,16 +4,16 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { Grain } from "@/components/grain";
 
-const boska = localFont({
+const generalSans = localFont({
   src: [
     {
-      path: "../public/fonts/Boska-Variable.woff2",
-      weight: "200 900",
+      path: "../public/fonts/GeneralSans-Variable.woff2",
+      weight: "200 700",
       style: "normal",
     },
     {
-      path: "../public/fonts/Boska-VariableItalic.woff2",
-      weight: "200 900",
+      path: "../public/fonts/GeneralSans-VariableItalic.woff2",
+      weight: "200 700",
       style: "italic",
     },
   ],
@@ -41,7 +41,7 @@ const switzer = localFont({
 export const metadata: Metadata = {
   title: "Stuckey — Websites that turn local searches into booked jobs",
   description:
-    "I build websites for trades, hospitality, and professional services that book more jobs than the one you have now. Most sites pay for themselves in 60–90 days.",
+    "I build websites for trades, hospitality and professional services across the UK that pay for themselves in 60–90 days.",
 };
 
 export default function RootLayout({
@@ -51,8 +51,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${boska.variable} ${switzer.variable} h-full antialiased`}
+      lang="en-GB"
+      className={`${generalSans.variable} ${switzer.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
         <Grain />

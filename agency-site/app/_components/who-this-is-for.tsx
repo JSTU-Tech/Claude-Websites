@@ -69,7 +69,7 @@ export function WhoThisIsFor() {
             />
             <div className="flex-1 flex flex-col gap-4">
               <h3
-                className="font-display italic font-extralight leading-[1.1] tracking-[-0.01em]"
+                className="font-display font-normal leading-[1.1] tracking-[-0.01em]"
                 style={{ fontSize: "var(--text-h3)" }}
               >
                 {card.trade}

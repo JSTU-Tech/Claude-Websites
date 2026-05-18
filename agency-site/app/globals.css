@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* ---------- Ink & Bone palette + motion tokens (locked in DESIGN.md) ---------- */
+/* ---------- Palette + motion tokens (DESIGN.md §3, §5) ---------- */
 
 @theme inline {
-  /* Palette — base (DESIGN.md §3) */
-  --color-bg: #f4f1ea;
-  --color-bg-deep: #ece6da;
-  --color-paper: #fbf7ee;
-  --color-ink: #171514;
-  --color-ink-deep: #0b0908;
-  --color-accent: #7a1f1b;
-  --color-accent-soft: #b85a4e;
+  /* Palette — Slate & Sage (DESIGN.md §3) */
+  --color-bg: #f2f0ea;
+  --color-bg-deep: #e7e2d6;
+  --color-paper: #fbf8f2;
+  --color-ink: #131310;
+  --color-ink-deep: #08070a;
+  --color-accent: #18433b;
+  --color-accent-soft: #6ba38b;
   --color-mineral: #2b3c3a;
-  --color-muted: #8a847b;
-  --color-rule: #1715141a;
+  --color-muted: #6f6c66;
+  --color-rule: #1313101a;
 
   /* Type families — set as variables by next/font/local in layout.tsx */
   --font-display: var(--font-display);
@@ -26,7 +26,7 @@
   --text-h3: clamp(1.5rem, 1.4rem + 0.5vw, 1.75rem);
   --text-h2: clamp(2.25rem, 2rem + 1.25vw, 3rem);
   --text-h1: clamp(3.5rem, 3rem + 2.5vw, 5rem);
-  --text-hero: clamp(3rem, 10.5vw, 10rem);
+  --text-hero: clamp(2.5rem, 6vw, 6.5rem);
 
   /* Motion easing — DESIGN.md §5 */
   --ease-quart: cubic-bezier(0.22, 1, 0.36, 1);
@@ -97,7 +97,6 @@ body {
   transform: scaleX(1);
 }
 
-/* Reduced motion respect */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

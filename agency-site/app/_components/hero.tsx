@@ -37,7 +37,7 @@ export function Hero() {
       {/* Display headline — line-by-line clip-mask reveal */}
       <h1
         id="hero-heading"
-        className="font-display italic font-extralight mt-12 md:mt-16 lg:mt-20 text-ink"
+        className="font-display font-normal mt-12 md:mt-16 lg:mt-20 text-ink"
         style={{
           fontSize: "var(--text-hero)",
           lineHeight: 0.95,
@@ -46,10 +46,9 @@ export function Hero() {
       >
         <RevealLines>
           {[
-            <>I build websites</>,
-            <>that turn local searches</>,
+            <>I build websites that turn</>,
+            <>local searches into</>,
             <>
-              into{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">booked jobs.</span>
                 <motion.span

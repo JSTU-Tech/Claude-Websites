@@ -41,7 +41,7 @@ export function FinalCta() {
 
       <h2
         id="final-heading"
-        className="font-display italic font-extralight mt-10 md:mt-14 tracking-[-0.02em] text-bg"
+        className="font-display font-normal mt-10 md:mt-14 tracking-[-0.02em] text-bg"
         style={{ fontSize: "clamp(3rem, 9vw, 8.5rem)", lineHeight: 0.96 }}
       >
         <RevealLines>

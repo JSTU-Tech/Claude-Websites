@@ -34,7 +34,7 @@ export function AboutFounder() {
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <span
-                className="font-display italic font-extralight text-ink/35 leading-none tracking-[-0.02em]"
+                className="font-display font-normal text-ink/35 leading-none tracking-[-0.02em]"
                 style={{ fontSize: "clamp(4rem, 9vw, 8rem)" }}
               >
                 JS
@@ -50,7 +50,7 @@ export function AboutFounder() {
         <RevealItem className="md:col-span-7 md:col-start-6 lg:col-span-8 lg:col-start-5 flex flex-col gap-8">
           <h2
             id="about-heading"
-            className="font-display italic font-extralight leading-[1.05] tracking-[-0.015em] max-w-[20ch]"
+            className="font-display font-normal leading-[1.05] tracking-[-0.015em] max-w-[20ch]"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
           >
             One founder. One studio. No middle layer.

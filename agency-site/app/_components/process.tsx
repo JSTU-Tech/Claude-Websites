@@ -52,7 +52,7 @@ export function Process() {
         {/* Intro */}
         <RevealItem
           as="p"
-          className="md:col-span-4 font-display italic font-extralight text-ink/90 leading-[1.1] tracking-[-0.01em]"
+          className="md:col-span-4 font-display font-normal text-ink/90 leading-[1.1] tracking-[-0.01em]"
           style={{ fontSize: "var(--text-h2)" }}
         >
           Four steps. No surprises. Fixed prices.
@@ -68,14 +68,14 @@ export function Process() {
                 className="grid grid-cols-[auto_1fr] gap-x-6 md:gap-x-10 py-8 md:py-10 border-t border-rule first:border-t-0"
               >
                 <span
-                  className="font-display italic font-extralight text-accent leading-none tabular-nums self-start"
+                  className="font-display font-normal text-accent leading-none tabular-nums self-start"
                   style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}
                 >
                   {step.n}
                 </span>
                 <div className="flex flex-col gap-3 self-center">
                   <h3
-                    className="font-display italic font-extralight leading-[1.05] tracking-[-0.01em]"
+                    className="font-display font-normal leading-[1.05] tracking-[-0.01em]"
                     style={{ fontSize: "var(--text-h3)" }}
                   >
                     {step.title}
