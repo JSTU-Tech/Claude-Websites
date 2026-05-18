@@ -11,7 +11,7 @@ import { caseStudies } from "@/lib/case-studies";
 export const metadata: Metadata = {
   title: "Work — Stuckey",
   description:
-    "Three concept case studies across trades, hospitality and professional services. Each one shows the problem, the approach and the number that moved.",
+    "Four projects across trades, hospitality and professional services. Real builds, real timelines, one live preview.",
 };
 
 export default function WorkPage() {
@@ -28,18 +28,17 @@ export default function WorkPage() {
           className="md:col-span-9 font-display font-normal leading-[0.98] tracking-[-0.02em] text-ink"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
         >
-          Three projects.
+          Four projects.
           <br />
-          One number per project.
+          One live preview.
         </RevealItem>
         <RevealItem
           as="p"
           className="md:col-span-3 text-ink/90 max-w-[42ch]"
           style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
         >
-          All currently concept projects — methodology proven, real client
-          numbers being collected. Replaced with live data the moment they
-          ship.
+          Most studies sit alongside their case writeup. Kiln House is built
+          and live — visit the actual site from the work page below.
         </RevealItem>
       </RevealSection>
 
@@ -76,9 +75,17 @@ export default function WorkPage() {
                 >
                   {study.title}
                 </h2>
-                <p className="mt-3 text-[0.875rem] text-muted">
-                  {study.client} · {study.year} ·{" "}
+                <p className="mt-3 text-[0.875rem] text-muted flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span>{study.client}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{study.year}</span>
+                  <span aria-hidden="true">·</span>
                   <span className="text-accent">{study.status}</span>
+                  {study.liveDemo ? (
+                    <span className="ml-2 inline-flex items-center gap-1 px-2 py-0.5 border border-accent text-accent text-[0.6875rem] tracking-[0.08em] uppercase">
+                      Live preview
+                    </span>
+                  ) : null}
                 </p>
               </div>
 

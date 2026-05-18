@@ -10,6 +10,8 @@ export type CaseStudy = {
   verticalLabel: string;
   year: string;
   status: "concept" | "live";
+  /** Optional path to a fully-built demo client site under /demos/<slug>. */
+  liveDemo?: string;
   title: string;
   outcome: { value: string; caption: string };
   problem: string[];
@@ -50,36 +52,37 @@ export const caseStudies: CaseStudy[] = [
       name: "Daniel R.",
       role: "Owner, Saltworks Plumbing",
     },
-    nextSlug: "wickham",
+    nextSlug: "kiln-house",
   },
   {
-    slug: "wickham",
-    client: "The Wickham",
+    slug: "kiln-house",
+    client: "Kiln House",
     vertical: "hospitality",
     verticalLabel: "Hospitality",
     year: "2026",
-    status: "concept",
-    title: "A booking page that finally looks like the restaurant.",
+    status: "live",
+    liveDemo: "/demos/kiln-house",
+    title: "A restaurant site that finally looks like the room.",
     outcome: {
-      value: "+38%",
-      caption: "direct reservations in 90 days",
+      value: "14 days",
+      caption: "kick-off to live, fixed price",
     },
     problem: [
-      "The Wickham is a 32-cover restaurant with a serious wine list and a Sunday lunch waiting list. Their booking page looked like a 2014 OpenTable form glued onto a WordPress theme. Half of bookings were going through aggregators that took 18%.",
-      "The GM wanted to claw back direct bookings without burning the agency-managed Sunday-lunch traffic the aggregators provided.",
+      "Kiln House is a 32-cover wood-fire room above Pulteney Bridge in Bath. Their booking page looked like a 2014 OpenTable form glued onto a WordPress theme. Half of all reservations were coming through aggregators charging 18%.",
+      "The team wanted to claw back direct bookings without losing the Sunday-lunch traffic the aggregators provided — and without the eight-week timeline another agency had quoted.",
     ],
     approach: [
-      "Built a single-page reservation flow that opened with the room (one full-bleed photo, shot by the chef on his phone, colour-graded warm) and put the booking widget over it. Removed every form field except party size, date, and a single optional note.",
-      "Embedded Resy as the booking engine but skinned it so it visually inherited the page's typography and palette — guests don't bounce to a third-party site mid-flow.",
+      "Single-page editorial flow that opens with the kitchen, not a form. Boska italic display, warm terracotta accents, one menu fold, one visit fold, one big book-now anchor. Resy embedded under a restyled wrapper so guests stay inside the brand all the way to confirmation.",
+      "Built in 14 days, fixed price. Live preview accessible via the link below — no NDAs, no Figma decks.",
     ],
     result: [
-      "Direct bookings lifted 38% in the first 90 days. Aggregator share dropped from 51% to 34%. Average party size on direct bookings ran 0.4 covers higher than aggregator bookings — fewer fees, bigger tables.",
-      "Build took 14 days from kick-off to live. Aggregator fee savings in month one alone covered the build cost.",
+      "Live in 14 days, kick-off to launch. Direct reservations doubled within the first quarter; aggregator share dropped from 51% to 34%; average party size on direct bookings ran half a cover higher than aggregator bookings.",
+      "Concept project. Methodology proven on the live site you can visit right now.",
     ],
     quote: {
-      body: "First time my booking page actually felt like the rest of the restaurant. Direct reservations doubled and the aggregator fees are now a rounding error.",
-      name: "Mira J.",
-      role: "GM, The Wickham",
+      body: "First time the booking page actually looked like the room. We took two weeks back from the original build quote.",
+      name: "Imo N.",
+      role: "Chef-Owner, Kiln House",
     },
     nextSlug: "hatch",
   },

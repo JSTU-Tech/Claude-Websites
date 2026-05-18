@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Custom cursor label — house primitive. A small editorial pill that
@@ -15,6 +16,8 @@ import { useEffect, useState } from "react";
  */
 
 export function CursorLabel() {
+  const pathname = usePathname();
+  const onDemoRoute = pathname?.startsWith("/demos") ?? false;
   const [label, setLabel] = useState<string | null>(null);
   const [isCoarse, setIsCoarse] = useState(false);
 
@@ -53,7 +56,7 @@ export function CursorLabel() {
     };
   }, [isCoarse, x, y]);
 
-  if (isCoarse) return null;
+  if (isCoarse || onDemoRoute) return null;
 
   return (
     <motion.div

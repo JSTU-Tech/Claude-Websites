@@ -209,6 +209,27 @@ export default async function CaseStudyPage({
             — {study.quote.name}, {study.quote.role}
           </footer>
         </RevealItem>
+
+        {study.liveDemo ? (
+          <RevealItem className="mt-12 md:mt-16 flex flex-col items-start gap-4">
+            <span className="eyebrow">Visit the live site</span>
+            <Link
+              href={study.liveDemo}
+              target="_blank"
+              rel="noopener"
+              data-cursor="Open"
+              className="group inline-flex items-center gap-3 bg-accent text-ink-deep px-7 py-4 text-[0.95rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft"
+            >
+              {study.client.toLowerCase()}.studio
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform duration-300 ease-[var(--ease-quart)] group-hover:translate-x-1"
+              >
+                ↗
+              </span>
+            </Link>
+          </RevealItem>
+        ) : null}
       </Block>
 
       {/* NEXT */}

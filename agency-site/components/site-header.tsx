@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, useReducedMotion } from "motion/react";
 import { studio } from "@/lib/studio";
 import { Magnetic } from "@/components/motion/magnetic";
@@ -14,6 +15,8 @@ const nav = [
 const EASE_QUART: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/demos")) return null;
   const prefersReduced = useReducedMotion();
   const fade = prefersReduced
     ? {}

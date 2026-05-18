@@ -1,10 +1,17 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 /**
  * Paper-grain overlay — fixed, full-viewport, pointer-events:none.
- * SVG fractal noise blended into the bone background for the print feel.
+ * SVG fractal noise blended into the page background for the print feel.
  * Subtle: 4-5% opacity so it reads as texture, not a screen door.
+ * Skipped on /demos/* routes where client sites manage their own atmosphere.
  */
 
 export function Grain() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/demos")) return null;
   return (
     <div
       aria-hidden="true"
