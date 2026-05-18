@@ -3,21 +3,18 @@
 import { motion, useReducedMotion } from "motion/react";
 
 /**
- * FoldMark — recurring section ornament. Pairs an italic ampersand-like
- * glyph (drawn as an SVG path that animates its stroke length in on scroll)
- * with a section index numeral set in Boska italic. Used at section heads
- * to anchor the editorial language between folds.
+ * FoldMark — recurring section ornament. Pairs a quiet editorial bullet
+ * (oxblood-accent square + short hairline rule, drawn in on scroll) with
+ * a section index numeral set in Boska italic.
  *
- * The glyph is a hand-authored bezier loop — not a literal "&" — designed
- * to read as a printer's mark rather than a typographic substitution.
+ * Replaces the original curly bezier "ampersand" glyph (cut on 2026-05-18
+ * — read as a generic decorative flourish rather than a Stuckey mark).
+ * The new mark mirrors the hairlines used throughout the site, so the
+ * section index reads as part of the editorial grid rather than an
+ * ornament tacked onto it.
  */
 
 const EASE_QUART: [number, number, number, number] = [0.22, 1, 0.36, 1];
-
-// Single-stroke ampersand-style figure — entry at bottom-left, exit at upper-right.
-// Drawn within a 60x60 viewBox.
-const AMPERSAND_PATH =
-  "M 8 52 C 8 32, 28 28, 32 40 C 36 52, 18 56, 14 48 C 10 38, 24 26, 36 18 C 44 12, 52 16, 52 24 C 52 32, 42 36, 36 32";
 
 export function FoldMark({
   index,
@@ -39,9 +36,9 @@ export function FoldMark({
       ].join(" ")}
     >
       <motion.svg
-        width="56"
-        height="56"
-        viewBox="0 0 60 60"
+        width="44"
+        height="20"
+        viewBox="0 0 44 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
@@ -49,33 +46,12 @@ export function FoldMark({
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
       >
-        <motion.path
-          d={AMPERSAND_PATH}
-          stroke="currentColor"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          variants={{
-            hidden: { pathLength: prefersReduced ? 1 : 0, opacity: 0.6 },
-            visible: {
-              pathLength: 1,
-              opacity: 1,
-              transition: {
-                pathLength: {
-                  duration: prefersReduced ? 0 : 0.95,
-                  ease: EASE_QUART,
-                },
-                opacity: { duration: 0.4 },
-              },
-            },
-          }}
-        />
-        {/* Small filled square — printer's-mark anchor */}
+        {/* Oxblood accent square — the bullet */}
         <motion.rect
-          x="52"
-          y="32"
-          width="4"
-          height="4"
+          x="0"
+          y="6"
+          width="8"
+          height="8"
           fill="var(--color-accent)"
           variants={{
             hidden: { opacity: 0, scale: 0.4 },
@@ -83,13 +59,38 @@ export function FoldMark({
               opacity: 1,
               scale: 1,
               transition: {
-                duration: 0.4,
+                duration: 0.45,
                 ease: EASE_QUART,
-                delay: prefersReduced ? 0 : 0.9,
+                delay: prefersReduced ? 0 : 0.05,
               },
             },
           }}
-          style={{ transformOrigin: "54px 34px" }}
+          style={{ transformOrigin: "4px 10px" }}
+        />
+        {/* Hairline rule — draws in left→right to point at the numeral */}
+        <motion.line
+          x1="14"
+          y1="10"
+          x2="42"
+          y2="10"
+          stroke="currentColor"
+          strokeWidth="1"
+          strokeLinecap="round"
+          variants={{
+            hidden: { pathLength: prefersReduced ? 1 : 0, opacity: 0.6 },
+            visible: {
+              pathLength: 1,
+              opacity: 0.55,
+              transition: {
+                pathLength: {
+                  duration: prefersReduced ? 0 : 0.6,
+                  ease: EASE_QUART,
+                  delay: prefersReduced ? 0 : 0.15,
+                },
+                opacity: { duration: 0.3 },
+              },
+            },
+          }}
         />
       </motion.svg>
 

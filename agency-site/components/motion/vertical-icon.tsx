@@ -19,18 +19,18 @@ const ICONS: Record<
 > = {
   trades: {
     viewBox: "0 0 120 120",
-    ariaLabel: "Hammer mark",
+    ariaLabel: "Spanner mark",
     paths: [
-      // Hammer head
-      "M 58 24 L 102 24 L 102 46 L 58 46 Z",
-      // Claw indent on head
-      "M 62 32 L 70 38",
-      // Neck transition into handle
-      "M 64 44 L 50 58",
-      // Handle, long diagonal
-      "M 50 58 L 16 100",
-      // Handle grip detail
-      "M 24 92 L 30 86",
+      // Box-end ring (outer circle) — top-left corner
+      "M 16 30 a 14 14 0 1 0 28 0 a 14 14 0 1 0 -28 0",
+      // Box-end ring (inner hole)
+      "M 23 30 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0",
+      // Shaft — diagonal from ring to open jaw
+      "M 40 40 L 82 82",
+      // Open-jaw fork — diamond-shaped wrench head at bottom-right
+      "M 82 82 L 96 70 L 108 82 L 94 96 Z",
+      // Inner notch of the open jaw — suggests the gripping surfaces
+      "M 92 84 L 98 90",
     ],
   },
   hospitality: {
@@ -49,18 +49,15 @@ const ICONS: Record<
   },
   professional: {
     viewBox: "0 0 120 120",
-    ariaLabel: "Fountain pen mark",
+    ariaLabel: "Necktie mark",
     paths: [
-      // Nib triangle
-      "M 18 100 L 32 106 L 38 92 Z",
-      // Nib slit
-      "M 26 99 L 33 103",
-      // Body, long taper
-      "M 38 92 L 96 30",
-      // Cap join
-      "M 80 46 L 90 36",
-      // End cap
-      "M 96 30 L 102 24",
+      // Tie silhouette — knot trapezoid into widening blade, narrowing
+      // to a point at the bottom
+      "M 50 18 L 70 18 L 66 36 L 76 84 L 60 104 L 44 84 L 54 36 Z",
+      // Knot bottom edge — line where the knot meets the blade
+      "M 54 36 L 66 36",
+      // Dimple — small V just below the knot, classic "smart" tie detail
+      "M 56 42 L 60 48 L 64 42",
     ],
   },
 };
