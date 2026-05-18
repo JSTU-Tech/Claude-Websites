@@ -42,7 +42,11 @@ export function SiteHeader() {
             {nav.map((item) => (
               <li key={item.href}>
                 <Magnetic radius={50} maxPull={3}>
-                  <Link href={item.href} className="link-underline">
+                  <Link
+                    href={item.href}
+                    data-cursor="Open"
+                    className="link-underline"
+                  >
                     {item.label}
                   </Link>
                 </Magnetic>

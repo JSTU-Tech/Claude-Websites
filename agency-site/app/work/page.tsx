@@ -54,6 +54,7 @@ export default function WorkPage() {
           >
             <Link
               href={`/work/${study.slug}`}
+              data-cursor="Read"
               className="group grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 items-baseline py-10 md:py-14 transition-colors duration-300 ease-[var(--ease-quart)] hover:bg-paper -mx-6 md:-mx-10 px-6 md:px-10"
             >
               <span className="md:col-span-1 eyebrow tabular-nums self-center">

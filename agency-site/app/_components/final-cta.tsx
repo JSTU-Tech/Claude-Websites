@@ -94,6 +94,7 @@ export function FinalCta() {
           <Magnetic radius={120} maxPull={7}>
             <Link
               href={studio.bookingUrl}
+              data-cursor="Book"
               className="group inline-flex items-center gap-3 bg-bg text-ink-deep px-8 py-5 text-[1rem] font-medium tracking-wide transition-colors duration-200 ease-[var(--ease-quart)] hover:bg-accent-soft hover:text-bg"
             >
               <span className="relative overflow-hidden inline-block">
