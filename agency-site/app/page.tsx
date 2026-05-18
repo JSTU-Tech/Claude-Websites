@@ -1,5 +1,6 @@
 import { Hero } from "./_components/hero";
 import { ProofBar } from "./_components/proof-bar";
+import { SplineShowcase } from "./_components/spline-showcase";
 import { KineticSection } from "./_components/kinetic-section";
 import { FeaturedCaseStudy } from "./_components/featured-case-study";
 import { WhoThisIsFor } from "./_components/who-this-is-for";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <ProofBar />
+      <SplineShowcase />
       <KineticSection />
       <FeaturedCaseStudy />
       <WhoThisIsFor />

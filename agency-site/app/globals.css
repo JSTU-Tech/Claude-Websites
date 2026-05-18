@@ -97,6 +97,21 @@ body {
   transform: scaleX(1);
 }
 
+/* Spline loader (used by SplineScene fallback) */
+.loader {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--color-rule);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: loader-spin 0.85s linear infinite;
+}
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
