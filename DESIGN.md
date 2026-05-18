@@ -4,6 +4,10 @@ This is the brief. Everything below is locked. Don't deviate without explicit ap
 
 ---
 
+**Tool-priority (read first):** Every section, every commit. The Magic MCP (21st.dev) is the *first stop* for any component — search the library before authoring. The frontend-design, motion-framer, gsap-scrolltrigger, modern-web-design, ui-ux-pro-max skills, and chrome-devtools / context7 MCPs are invoked *before* code, not after. Skipping a step requires written justification in the commit. See CLAUDE.md for the full 12-step workflow.
+
+---
+
 ## 1. The business this is selling
 
 Solo founder. Website design + production agency. Full pricing and service ladder is locked in `BUSINESS.md` — read it before any copy or pricing decision.

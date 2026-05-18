@@ -6,6 +6,8 @@
 
 Brand-new website design + production agency's demo site. The site IS the portfolio — cold prospects judge the founder by it. Read DESIGN.md and BUSINESS.md before any code. Brief is locked. Bans absolute. Pricing is locked.
 
+**Tooling-first rule (applies to every Claude session on every studio project):** Before writing any code, search the installed MCPs / plugins / skills for the work. The Magic MCP (21st.dev) is the starting point for components, not a last resort. The frontend-design / motion-framer / gsap-scrolltrigger / modern-web-design / ui-ux-pro-max skills are invoked *before* authoring, not after. This is non-negotiable — the studio's differentiator is what these tools enable.
+
 When writing pricing copy, target-vertical language, or service descriptions: reference BUSINESS.md exclusively. Do not invent prices, tiers, or service names.
 
 ## Tools you MUST use (not optional)
@@ -23,13 +25,13 @@ For EVERY section/component you build, in this order:
 5. **gsap-scrolltrigger skill** — only for the single narrative scroll moment on the case study page. Nowhere else.
 6. **lottie-animations / scroll-reveal-libraries / locomotive-scroll** — skills are installed, DO NOT use them. DESIGN.md §5 bans them.
 7. **modern-web-design** — reference for any pattern decision you're unsure about.
-8. **magic MCP (21st.dev)** — use for component scaffolding ONLY when faster than writing from scratch. Override every default class (radius, color, type) before committing. Generic Magic UI defaults are banned.
+8. **magic MCP (21st.dev)** — **FIRST stop for any new section / component.** Run `21st_magic_component_inspiration` to search the full 21st.dev library before authoring anything from scratch. Use `21st_magic_component_builder` to scaffold, then `21st_magic_component_refiner` for tweaks. Override every default class (radius, color, type) before committing — generic Magic UI defaults are banned but the library itself is the starting point, never the fallback. If you author a section without invoking Magic first, justify it explicitly in the commit message.
 9. **higgsfield MCP** — generate all hero imagery and case-study visuals. No stock photos. Prompt for warm-toned, editorial, single-subject compositions.
 10. **playwright MCP** — screenshot the section at 1440px and 390px after every change. Compare against DESIGN.md §10 taste test in writing.
 11. **chrome-devtools MCP** — run a Lighthouse + perf trace before declaring a page done. Numbers must hit DESIGN.md §11.
 12. **web-quality-skills (addyosmani)** — invoke `web-quality-audit` before any commit to main. Hard gate.
 
-If a tool isn't invoked, say so explicitly and justify why. Default is: use it.
+**Default is: invoke. Skipping requires a written justification in the commit message.** This list is the floor, not a menu — every step above runs every section, every time. The output looking generic = a tool was skipped.
 
 ## Build conventions
 
