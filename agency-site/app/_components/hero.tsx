@@ -198,11 +198,12 @@ export function Hero() {
         >
           <RevealLines>
             {[
-              <>Websites that pay</>,
+              <>I build the website</>,
+              <>your business should</>,
               <>
-                for{" "}
+                have had{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">themselves.</span>
+                  <span className="relative z-10">three years ago.</span>
                   <motion.span
                     aria-hidden="true"
                     className="absolute inset-x-0 bottom-[-0.04em] h-[0.07em] bg-accent-soft origin-left"
@@ -211,7 +212,7 @@ export function Hero() {
                     transition={{
                       duration: 0.8,
                       ease: EASE_QUART,
-                      delay: prefersReduced ? 0 : 1.0,
+                      delay: prefersReduced ? 0 : 1.25,
                     }}
                   />
                 </span>
@@ -228,24 +229,23 @@ export function Hero() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 pt-8 md:pt-10">
           <motion.p
-            className="md:col-span-7 lg:col-span-6 text-ink/85 max-w-[60ch]"
+            className="md:col-span-7 lg:col-span-6 text-ink/85 max-w-[62ch]"
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             {...reveal(1.4)}
           >
-            Most small business sites lose visitors in the first three
-            seconds. Mine don&apos;t. Websites for{" "}
+            <span className="text-accent-soft font-medium">Two weeks.</span>{" "}
+            A fraction of agency pricing. Built for{" "}
             <AnimatedTextCycle
               className="text-accent-soft font-medium"
               words={[
-                "tradespeople",
-                "restaurants & bars",
-                "accountants",
-                "joiners & builders",
-                "garages",
-                "consultants",
+                "trades",
+                "hospitality",
+                "professional services",
+                "tech startups",
+                "local services",
               ]}
             />{" "}
-            across the UK — built in four weeks, in profit by ninety days.
+            — if your current site looks like 2018, this is for you.
           </motion.p>
 
           <motion.div

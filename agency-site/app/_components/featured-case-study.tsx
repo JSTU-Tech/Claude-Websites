@@ -29,7 +29,7 @@ const study = {
   statPrefix: "£",
   statSuffix: "k",
   statCaption: "tracked in new bookings, year one",
-  quote: "The site paid for itself in seven weeks.",
+  quote: "Live in 14 days. Bookings doubled inside the quarter.",
   attribution: "Owner, Saltworks Plumbing",
   cta: "Read the full case",
   ctaHref: "/work/saltworks",

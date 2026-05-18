@@ -5,10 +5,9 @@ import {
 } from "@/components/motion/reveal-section";
 
 /**
- * Pricing signal — out-converts any testimonial (DESIGN.md §6 #7). The
- * range is the editorial moment; the qualifier-line is type, not bullets.
- * One inverted band on --bg-deep to set it apart from the surrounding
- * sections without burning the dark takeover (kept for case study only).
+ * Pricing signal — anchor + range + speed claim. Numbers locked in
+ * BUSINESS.md §5. No guarantee language, no "pay-for-itself" lift —
+ * the edge is speed and value, not ROI promises.
  */
 
 export function PricingSignal() {
@@ -18,7 +17,7 @@ export function PricingSignal() {
       className="bg-bg-deep/60 border-y border-rule"
     >
       <div className="px-6 md:px-10 py-24 md:py-32">
-        <FoldMark index="05" label="Investment" />
+        <FoldMark index="06" label="Investment" />
 
         <RevealSection
           className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 items-end"
@@ -29,11 +28,11 @@ export function PricingSignal() {
             className="md:col-span-8 font-display font-normal leading-[0.98] tracking-[-0.02em]"
             style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
           >
-            <span className="block text-ink">Projects from</span>
-            <span className="block text-accent">£4,800.</span>
+            <span className="block text-ink">Sites from</span>
+            <span className="block text-accent">£1,200.</span>
             <span className="block text-ink/90">
-              Most clients invest{" "}
-              <span className="whitespace-nowrap">£6k&nbsp;–&nbsp;£12k</span>.
+              Most projects{" "}
+              <span className="whitespace-nowrap">£2,400&nbsp;–&nbsp;£4,000</span>.
             </span>
           </RevealItem>
 
@@ -45,13 +44,13 @@ export function PricingSignal() {
               className="text-ink/90"
               style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             >
-              One quote, fixed for the project. Copy, design, build, Cal.com
-              booking, on-page SEO, analytics and a 90-day performance
-              guarantee are all in.
+              Live in two weeks. Fixed price, fixed scope. One quote covers
+              copy, design, build, domain, hosting and Google Business Profile
+              setup.
             </p>
             <p className="text-[0.8125rem] text-muted leading-snug">
-              No retainers. No charge for the audit. No bolt-on invoices once
-              the work begins.
+              Care plans from £63/month — hosting, backups, monitoring.
+              Optional, not bundled.
             </p>
           </RevealItem>
         </RevealSection>

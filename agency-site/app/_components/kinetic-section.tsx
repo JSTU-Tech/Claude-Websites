@@ -13,11 +13,12 @@ export function KineticSection() {
   return (
     <KineticStrip
       items={[
-        "Now booking for autumn 2026",
-        "Built in Bath",
-        "Three projects at a time, no more",
-        "Plain English, no retainers",
-        "Fixed-price, fixed-scope",
+        "5-figure design quality",
+        "4-figure price",
+        "2-week delivery",
+        "Sites from £1,200",
+        "Live in 14 days",
+        "Built in Bath, UK",
       ]}
       separator="✦"
       durationSec={42}

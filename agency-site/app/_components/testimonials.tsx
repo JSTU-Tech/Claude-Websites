@@ -19,7 +19,7 @@ import {
 
 const all: ColumnTestimonial[] = [
   {
-    text: "The site paid for itself in seven weeks. I get more calls than I can handle and we hired a second engineer in month six.",
+    text: "Live in 14 days. Bookings doubled inside the quarter and we hired a second engineer in month six.",
     image: "",
     name: "Daniel R.",
     role: "Owner, Saltworks Plumbing (concept)",

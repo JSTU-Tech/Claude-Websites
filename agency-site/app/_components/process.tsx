@@ -13,23 +13,23 @@ import {
 const steps = [
   {
     n: "01",
-    title: "Audit",
-    body: "I dig into your current site and pull the data on what's broken. One week, fixed price. You get a one-page report whether you hire me or not.",
+    title: "Free Loom audit",
+    body: "Send me your URL. You get a 10-minute Loom walkthrough of what's costing you customers — copy, layout, mobile, speed, conversion. No call required, no obligation, no charge.",
   },
   {
     n: "02",
-    title: "Brief",
-    body: "We agree what the site needs to do and write it down on one page of plain English. No deliverables list, no Gantt chart, no scope-creep clause.",
+    title: "Build",
+    body: "Seven to 21 days depending on tier — 1-page Starter, 3–5-page Standard, or 6–8-page Premium. Fixed price quoted up front, no surprises, weekly progress shares.",
   },
   {
     n: "03",
-    title: "Build",
-    body: "Design, copy, build, ship. Two to four weeks depending on size. You see progress weekly, not at the end. Changes are free until launch day.",
+    title: "Launch",
+    body: "I handle the technical bit — domain, hosting, Google Business Profile, analytics. You approve, I press go. Live the day we agreed.",
   },
   {
     n: "04",
-    title: "Track",
-    body: "Once it's live, I measure. If the numbers don't move in 90 days, I rebuild the section that's underperforming on me, not you.",
+    title: "Care plan",
+    body: "Optional ongoing — hosting, backups, monitoring from £63/month. Bigger tiers add content edits and dev time. Cancel any time, never bundled into the build.",
   },
 ];
 
@@ -55,7 +55,7 @@ export function Process() {
           className="md:col-span-4 font-display font-normal text-ink/90 leading-[1.1] tracking-[-0.01em]"
           style={{ fontSize: "var(--text-h2)" }}
         >
-          Four steps. No surprises. Fixed prices.
+          Four steps. Live in two weeks. Fixed price up front.
         </RevealItem>
 
         {/* Steps track */}

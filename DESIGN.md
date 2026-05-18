@@ -1,101 +1,67 @@
 # Creative Direction — Agency Demo Site
 
-This is the brief. **Most of it is locked** (palette tokens, type families, copy, page architecture, slop ban list). **Some of it is intentionally loosened** to allow ambitious execution — see callouts below. When uncertain, ask before guessing.
-
-**Operating principle:** ambitious *and* considered. Restraint is a tool, not a doctrine. Every section needs at least one signature moment (composition, motion, or interaction) that earns the price tag. "Clean enough" is failure.
+This is the brief. Everything below is locked. Don't deviate without explicit approval.
 
 ---
 
 ## 1. The business this is selling
 
-Solo founder. Website design + production agency. Wedge: a better website is the cheapest growth channel SMB clients aren't using. Buyers are trades, hospitality, professional services, e-commerce — owners with weak/dated sites, not marketing directors.
+Solo founder. Website design + production agency. Full pricing and service ladder is locked in `BUSINESS.md` — read it before any copy or pricing decision.
+
+Five target verticals: **trades** (plumber, electrician, HVAC, roofer), **hospitality** (boutique hotels, cafes, restaurants), **professional services** (legal, accounting, financial, consultants), **tech startups** (seed–Series A marketing sites), **local services** (gyms, salons, clinics).
+
+Wedge: **5-figure design quality. 4-figure price. 2-week delivery.** Traditional agencies charge $10K–$30K and take 8–16 weeks. I charge a fraction of that and ship in 14 days. The edge is process — modern tools, no agency overhead, direct founder communication.
 
 Positioning sentence (memorize):
-> **"I build websites for [trades / hospitality / professional services] that book more jobs than the one you have now. Most sites pay for themselves in 60–90 days."**
+> **"I build the website your business should have had three years ago. Two weeks. A fraction of agency pricing."**
 
-Tone: founder-direct. Short sentences. Specifics. No "we." No agency-speak.
+Tone: founder-direct. Short sentences. Specifics. No "we." No agency-speak. No ROI guarantees you can't back up.
 
 ---
 
-## 2. Aesthetic direction — editorial-typographic, with ambition
+## 2. Aesthetic direction: Editorial-typographic, restrained motion
 
-Reference set: **Basement Studio**, **Locomotive**, **Tomorrow**, **Ben Mingo**, **Active Theory** (for the bolder moments), **Pentagram** print specimens, **Lekker Studio**. Not Linear, not Vercel, not Stripe.
+Reference set: print magazines, type specimens, museum catalogues. Not Linear, not Vercel, not Stripe. Closer to **Basement Studio**, **Locomotive**, **Tomorrow**, **Ben Mingo**.
 
 Compositional rules:
-- Big type as primary visual layer. Type carries the page.
+- Big type as primary visual. Type carries the page, not graphics.
 - Intentional asymmetry. Anti-grid where it earns.
-- Generous negative space — bone/cream backgrounds, not pure white. Use it as canvas for one signature element per section, not as filler.
-- Graphics are encouraged when they earn their place — see §3a. Decorative-for-decoration's-sake is not.
+- Generous negative space — bone/cream backgrounds, not pure white.
+- One photograph or one piece of media per fold, max. No collages.
 
-The site should read as "the founder operates at a different level" within 3 seconds. Quiet confidence with one loud-on-purpose moment per fold.
-
-**Use the skills before you compose.** Run `frontend-design`, `ui-ux-pro-max`, and `modern-web-design` (and the motion skills, see §5) before sketching the section. They exist for exactly this brief.
+The site should read as "the founder knows what they're doing" within 3 seconds. Quiet confidence, not loud.
 
 ---
 
-## 3. Colour palette — Forest & Bone (dark-first)
+## 3. Color palette — Ink & Bone
 
-Site is dark-first as of 2026-05-18. Founder feedback: cream contrast was breaking the editorial cohesion. Now: ink-deep page background, bone type, forest-green primary accent that pops on dark.
+Locked. Use these tokens, no others.
 
 ```
---bg:         #0A0908   /* default page bg — deep ink */
---bg-deep:    #14120E   /* lifted banding bg (kinetic strip, pricing) */
---paper:      #1E1B14   /* card surface on bg */
---ink:        #F2F0EA   /* bone — default text colour */
---ink-deep:   #04030B   /* deepest dark — rare takeover sections (case study, lamp, final-CTA) */
---accent:     #2A7A66   /* brighter forest — primary signal, pops on dark */
---accent-soft:#6BA38B   /* sage — secondary accent, hover, ornamental */
---mineral:    #2B3C3A   /* deep eucalyptus, reserved */
---muted:      #8C8980   /* lighter neutral grey, readable on dark */
---rule:       #F2F0EA1A /* 10% bone hairlines on dark */
+--bg:        #F4F1EA   /* warm bone, page background */
+--ink:       #171514   /* warm off-black, all text */
+--accent:    #7A1F1B   /* oxblood, single accent only */
+--muted:     #8A847B   /* warm grey, secondary text */
+--rule:      #1715141A /* 10% ink for hairlines */
 ```
 
 **Rules:**
-- Brighter forest (`--accent`) is the *only* signal colour. It appears on CTAs, key numbers, link underlines, and the single editorial flourish per section. Don't dilute it.
-- Sage (`--accent-soft`) is the secondary accent — for hover states, the lamp glow, the underline draw on inverted heroes. Use sparingly.
-- `--mineral` and other future tones are *section-level* moves — entire alternative-tone blocks — never accents on top of bg.
-- No gradients on type. No gradient buttons. Atmospheric gradients (radial wash behind hero, subtle vertical fade for readability) are allowed only in palette colours, never multi-hue, never rainbow.
-- No pure white. No pure black. No neon. No corporate blue.
-- Photography is warm-tinted, never cool/blue. Treat photos with a slight desaturation so they sit on the dark page.
-
-### §3a. Graphics
-
-Graphics are allowed and encouraged when they replace generic stock or carry meaning. Approved categories:
-
-- **Typographic ornaments** — large italic `&`, `§`, `¶`, fractional numerals used as section anchors.
-- **Custom monogram / printer's mark** for the studio wordmark that recurs at fold breaks.
-- **Single-line editorial drawings** for verticals (e.g. trades / hospitality / professional services). Vector, ink-coloured, hand-drawn feel.
-- **Process diagrams** for the 4-step section — schematic, ink-line.
-- **Real photography** when shot specifically for the studio (founder portrait, work-in-progress shots, deliverable mockups). Never Unsplash.
-- **Animated SVG ornaments** that respond to scroll position or cursor (subtle, not gimmicks).
-- **Spline 3D scenes** (via `components/spline-scene.tsx`) — a single editorial 3D object per site, lazy-loaded, monochrome or palette-coloured. Never decorative blobs.
-- **ContainerScroll 3D card reveal** (via `components/motion/container-scroll.tsx`) — scroll-driven tilt of a screen-shaped card showing the live site preview. Use for the case study "big visual" or a flagship feature reveal.
-- **ShaderHero atmospheric fold** (via `components/motion/shader-hero.tsx`) — WebGL2 fragment-shader nebula on `--ink-deep`, palette-tinted clouds. Hero or mid-page atmospheric section. Pauses rendering when scrolled out of view to spare battery + GPU.
-- **WebGLShader background layer** (via `components/motion/webgl-shader.tsx`) — Three.js RGB-scanline shader that lives inside a parent section as an atmospheric background. Pairs with high-contrast typographic foreground. Pauses when off-screen.
-- **TestimonialsColumn marquee** (via `components/motion/testimonials-column.tsx`) — vertical auto-scrolling testimonial column. Use 2–3 stacked at different durations behind a top/bottom fade mask for a marquee wall effect.
-- **CursorLabel** (via `components/motion/cursor-label.tsx`) — site-wide custom cursor label, reads `data-cursor` attributes. Mount once in the root layout; never the dot-and-ring slop.
-- **LampContainer** (via `components/motion/lamp-container.tsx`) — conic-gradient spotlight fold (sage on ink-deep). Wrap exactly one short headline / number fold per site, max.
-- **AnimatedTextCycle** (via `components/motion/animated-text-cycle.tsx`) — cycling word inside an inline sentence. Pair with the locked positioning sentence's `[trades / hospitality / professional services]` bracket to rotate the named buyer in place.
-
-All eight components form the **house kit** — wire each one into every new studio build at the appropriate moment, not just this one. They're the differentiators.
-
-Banned graphic categories listed in §9 still apply (no 3D blobs, no AI-generated abstract gradients, no stock laptop-with-charts).
+- One accent only. Oxblood appears on: CTA buttons, key numbers, link underlines, the single editorial flourish per section. Nothing else gets the accent.
+- No gradients anywhere. Ever.
+- No pure white. No pure black.
+- Photography is warm-toned (slight cream tint), not cool/blue.
 
 ---
 
-## 4. Typography — Fontshare
+## 4. Typography — Pangram Pangram
 
-Locked. Free for commercial use via fontshare.com. Files live in `agency-site/public/fonts/`.
+Locked. Both faces are variable. License from pangrampangram.com.
 
 ```
-Display:  General Sans    (variable axis 200–700 + italic — regular weight for hero, medium for H2)
-Body:     Switzer         (variable axis 100–900 + italic; 400 body, 500 emphasis)
-Mono:     none loaded     (use ui-monospace system stack if needed for case-study metrics)
+Display:  PP Editorial New     (italic ultralight for hero, regular for H2-H3)
+Body:     PP Neue Montreal     (400 body, 500 emphasis)
+Mono:     PP Fraktion Mono     (case-study metrics only, optional)
 ```
-
-General Sans is the upgrade from Boska italic. The brief was "less artsy, more UK business" — General Sans reads as modern, confident, used by the kind of agencies a SMB owner actually hires. Italics are reserved for the rare in-line emphasis, never as the default display style.
-
-Loaded via `next/font/local` and exposed as Tailwind v4 theme tokens: `--font-display` (General Sans), `--font-body` (Switzer). Use `font-display` and `font-body` utility classes. Boska files may stay in `public/fonts/` for now but are not referenced — do not import them.
 
 **Sizing scale** (rem):
 ```
@@ -112,13 +78,11 @@ Line-height: 0.95 on display, 1.1 on H1–H2, 1.55 on body.
 
 **Eyebrow labels** (small uppercase tracked) appear above every section title. This is part of the editorial language.
 
-**Kinetic type is allowed.** Horizontal marquees, scroll-velocity-driven sliders, character-by-character reveals on entrance, scrambled-to-resolved hero loads. Use the `motion-framer` and `gsap-scrolltrigger` skills to choreograph.
-
 ---
 
-## 5. Motion language — restrained craftsmanship, not minimalism
+## 5. Motion language
 
-Every section ships with a motion plan. Static = unfinished.
+Locked. Restraint > maximalism.
 
 **Easing curves:**
 ```
@@ -129,35 +93,22 @@ Sections:   cubic-bezier(0.83, 0, 0.17, 1)     /* ease-in-out-quart, sections on
 **Durations:**
 - UI interactions: 200–400ms
 - Entrance/scroll reveals: 600–900ms
-- Hero pageload choreography may chain reveals — total under 2000ms
-- Never single-segment over 1000ms
+- Never over 1000ms
 
 **Stagger:** 40–80ms between sibling reveals.
 
-**Required motion moments** (the site MUST ship these — they are the wow factor):
-
-1. **Hero pageload choreography** — split-text line reveal under clip-mask, accent underline draws in, CTA fades up. Sequenced, not simultaneous.
-2. **Magnetic CTA primary** — and magnetic wordmark + nav. 6px max pull, spring physics.
-3. **Scroll-triggered section reveals** — every section past the fold uses an in-view reveal pattern, staggered.
-4. **One narrative scroll moment** — pinned GSAP ScrollTrigger sequence in the featured case study or about-process section. Scrub-controlled type or before/after reveal. ONE site-wide.
-5. **Kinetic type strip** — at least one section (between proof and case study, or between process and pricing). Infinite marquee modulated by scroll velocity.
-6. **View Transitions API** for route changes — shared-element morph from `/work` card thumbnail to case study hero.
-7. **Hover micro-interactions** that surprise — animated underlines, button text-up-text-up swaps, magnetic pulls. No `whileHover scale`.
-
 **Library use:**
-- **Motion** (v12, import from `"motion/react"`) is primary. Invoke the `motion-framer` skill before authoring.
-- **GSAP + ScrollTrigger** for the one narrative scroll moment AND for any scroll-scrubbed sequence. Invoke the `gsap-scrolltrigger` skill.
-- **Locomotive Scroll** is permitted when a section's pacing genuinely benefits from smooth-scroll inertia. Don't enable it globally without checking against `prefers-reduced-motion` and CLS impact. Invoke the `locomotive-scroll` skill.
-- **Lottie** is permitted for the process diagram or studio mark animation, *if* the JSON is hand-keyed or sourced from a real designer — not AI-generated. Invoke the `lottie-animations` skill.
-- **AOS / `scroll-reveal-libraries`** is the simple fallback for in-view reveals when motion isn't needed.
+- **Motion** (already installed as `framer-motion` v12 — but use the `motion` import path going forward) is primary.
+- **GSAP + ScrollTrigger**: only for ONE narrative scroll moment (case-study reveal). If we don't have one, don't ship GSAP.
+- **Lottie**: skip. We don't have a real illustrator.
+- **Locomotive Scroll**: skip. Native scroll only. (Yes, even though it's installed in our plugin set — that's for client work where it earns. Not here.)
+- **View Transitions API**: ship it for route changes. Next.js 16 supports it.
 
 **Hover/interaction rules:**
-- Cards: 2–4px Y shift + border color change + optional internal text/image shift. **No scale.**
-- Buttons: background fill swap (200ms) + internal text/icon micro-motion. No scale.
+- Cards: 2–4px Y shift + border color change. **No scale.**
+- Buttons: background fill swap (200ms), no scale.
 - Links: animated underline (200ms left→right).
 - Images: 2% scale max on slow zoom-in (case studies only).
-
-**Always respect `prefers-reduced-motion`.** Use Motion's `useReducedMotion` and gate transitions.
 
 ---
 
@@ -177,33 +128,32 @@ Five pages. No more.
 
 ### Home — section order (top to bottom)
 
-1. **Hero** — value prop sentence, one supporting line, one CTA ("Book a call"). Founder name + small photo. Pageload choreography per §5 #1.
-2. **Proof bar** — 4–6 client names as text (not logos), OR a single big number ("$3.2M in tracked client revenue"). Single oxblood accent.
-3. **Kinetic type strip** — infinite marquee, scroll-velocity modulated. Studio statement / availability / location.
-4. **Featured case study** — full-width, real outcome visible without clicking. Hosts the narrative scroll moment (§5 #4) — pinned scrub, before/after, or stat reveal.
-5. **Who this is for** — 3 plain cards: Trades & home services / Hospitality / Professional services. Each card has a one-liner outcome plus a single-line editorial drawing of the vertical (§3a).
-6. **Process** — 4 numbered steps, one sentence each. Schematic ink-line diagram or Lottie. Scroll-revealed in sequence.
-7. **Pricing signal** — "Projects from $X. Most clients invest between $X–$Y."
-8. **Testimonials** — 2–3 real quotes from real owners with real photos.
-9. **About the founder** — 2–3 sentences, photo, LinkedIn link.
-10. **Final CTA** — repeat. "Book a call." With its own motion treatment.
+1. **Hero** — value prop sentence, one supporting line, one CTA ("Book a call"). Founder name + small photo. No carousel, no animated background.
+2. **Proof bar** — 4–6 client names as text (not logos), OR a single big number ("$3.2M in tracked client revenue").
+3. **Featured case study** — one, full-width, real outcome visible without clicking.
+4. **Who this is for** — 5 plain cards: Trades / Hospitality / Professional services / Tech startups / Local services. Each card has a one-liner outcome (per BUSINESS.md §1).
+5. **Process** — 4 numbered steps: (1) Strategic audit, (2) Build, (3) Launch, (4) Care plan. One sentence each. SMB anxiety-killer.
+6. **Pricing signal** — exact copy from BUSINESS.md §5:
+   > Sites from $1,500. Most projects $3,000–$5,000.
+   > Live in two weeks.
+   > Care plans from $79/month.
+   No full menu, no tier comparison. Anchor + range + speed claim only.
+7. **Testimonials** — 2–3 real quotes from real owners with real photos.
+8. **About the founder** — 2–3 sentences, photo, LinkedIn link.
+9. **Final CTA** — repeat. "Book a call."
 
 ### Case study page — section order
 
-1. Hero: client name, year, one-line outcome (the number). Shared-element transition from `/work` card.
+1. Hero: client name, year, one-line outcome (the number).
 2. Big visual — single image or video, full-bleed.
 3. The problem — 2 short paragraphs.
 4. The approach — 2 short paragraphs + 1 supporting image.
-5. The result — the number, the quote, before/after if applicable. May host the narrative scroll moment if not used on Home.
+5. The result — the number, the quote, before/after if applicable.
 6. Next case study link.
 
 ---
 
 ## 7. Copy direction
-
-**Language: British English.** This is a UK business selling to UK SMBs. Use British spellings (organisation, colour, optimise, enquiry, programme), British currency (£ not $), and plainspoken UK phrasing.
-
-**No quarter-talk, no SaaS-speak.** Don't say "Q3" or "this quarter" — say "this autumn" or "in the next three months." Don't say "leverage," "scale up," "stakeholders," "ecosystem." Talk like an actual British tradesperson would understand.
 
 ### Banned words/phrases
 
@@ -211,38 +161,17 @@ Five pages. No more.
 crafting, craft (verb), elevate, bespoke, tailored, seamless,
 synergy, experiences, journey, tomorrow, next-generation,
 empower, unleash, supercharge, revolutionize, pixel-perfect,
-leverage (verb), scale up, stakeholders, ecosystem, solutions,
-Q1/Q2/Q3/Q4, "this quarter", "next quarter",
 "we" (when you mean "I"), "trusted by 1000+ companies"
 ```
 
-### Americanisms to avoid
+### Hero headline (locked)
 
-```
-$ → £
-"math" → "maths"
-"organize" → "organise" (and -ize → -ise generally)
-"color" → "colour"
-"realize" → "realise"
-"sidewalk" → "pavement"
-"fall" (season) → "autumn"
-"vacation" → "holiday"
-"check" (verb for inspect) — keep "check" but not "checking-out" for buy
-"gotten" → "got"
-```
-
-### Hero headline (locked — updated 2026-05-18)
-
-> **Websites that pay for themselves.**
-
-Short. On-product (we sell websites, full stop). No lead-gen lift. The 60–90 day payback that earned the prior headline lives in the sub.
+> **I build the website your business should have had three years ago.**
 
 Sub-headline:
-> Most small business sites lose visitors in the first three seconds. Mine don't. Websites for [cycling vertical] across the UK — built in four weeks, in profit by ninety days.
+> Two weeks. A fraction of agency pricing. Trades, hospitality, professional services, tech startups, local services — if your current site looks like 2018, this is for you.
 
 CTA: **Book a call** (not "Get Started", not "Schedule a discovery consultation").
-
-**Scope rule:** the studio only sells websites. Don't write copy that implies lead generation, ads, social, SEO retainers, branding, or any other service. Every outcome stated on the site must be a direct result of the website itself.
 
 ### Founder voice samples
 
@@ -254,7 +183,7 @@ Use contractions. State opinions. Name buyers by trade. Quote numbers.
 
 ---
 
-## 8. Tech stack
+## 8. Tech stack (locked)
 
 Already scaffolded — don't change framework choices.
 
@@ -264,9 +193,6 @@ React:         19.2 — already installed
 Styling:       Tailwind v4 with CSS-first @theme config
 Components:    shadcn — Button, Form, Dialog ONLY, heavily overridden
 Motion:        framer-motion v12 (import from "motion/react") — installed
-Scroll:        GSAP + ScrollTrigger (add when wiring the narrative moment)
-               Locomotive Scroll (add only if a section earns it)
-Lottie:        lottie-react / @dotlottie/react (add only when a real JSON exists)
 Transitions:   Native View Transitions API
 Images:        next/image, AVIF, priority on hero only
 CMS:           None. MDX or hard-coded TSX.
@@ -276,17 +202,16 @@ Analytics:     Plausible or Vercel Analytics. Not GA4.
 
 **Tailwind v4 theme tokens** live in `app/globals.css` under `@theme inline`. Define palette + font tokens there; reference everywhere with semantic names (`bg-bg`, `text-ink`, `text-accent`).
 
-**shadcn override discipline:** every shadcn component imported must have its radius, border, type, and color classes replaced before it ships. The default look is banned.
+**shadcn override discipline:** every shadcn component I import must have its radius, border, type, and color classes replaced before it ships. The default look is banned.
 
 ---
 
-## 9. The AI-slop ban list (protective floor — keeps us out of generic territory)
+## 9. The AI-slop ban list
 
 Every default Claude Code reaches for. Explicit bans:
 
 ### Fonts
 - Inter, Roboto, DM Sans, Manrope, Geist, Poppins, Outfit, Arial, any Google Sans-Serif default.
-- Boska italic as a *default display* — kept on disk for future flourish use only, never as the recurring headline font.
 
 ### Colors
 - Any purple → blue gradient
@@ -294,7 +219,6 @@ Every default Claude Code reaches for. Explicit bans:
 - Neon mint accent
 - Default shadcn `slate`/`zinc` palette
 - Pure white (#FFFFFF) or pure black (#000000)
-- Type-on-gradient
 
 ### Components
 - Three-column "Features" grid with rounded cards + Lucide icon at top of each
@@ -308,16 +232,16 @@ Every default Claude Code reaches for. Explicit bans:
 
 ### Motion
 - `whileHover={{ scale: 1.05 }}` on any card
-- Universal `initial={{ opacity: 0, y: 20 }}` section fade-up applied identically to every section
-- Animated number counters in the hero (counters elsewhere may earn their place — case study results section is fine)
-- Custom cursor that's literally a dot + delayed ring
+- Universal `initial={{ opacity: 0, y: 20 }}` section fade-up
+- Animated number counters in the hero
+- Custom cursor (dot + delayed ring)
 - Parallax stars / particle backgrounds
-- Mr. Robot text-scramble effect *as decoration* (a single intentional resolve on a key word can work)
+- Mr. Robot text-scramble effect
 - Section-snap scroll-jacking
 
 ### Imagery
 - Stock photos of laptops with charts
-- AI-generated abstract gradient blobs as hero backgrounds
+- AI-generated abstract gradients
 - 3D blob shapes
 - Generic Unsplash people-pointing-at-screens
 - Lucide icons at default size in every section
@@ -333,14 +257,12 @@ Every default Claude Code reaches for. Explicit bans:
 
 ## 10. The taste test — apply to every component before merging
 
-Before any section ships, answer in writing (in commit message body):
+Before any section ships, answer in writing (in PR description or commit message):
 
 1. **What reference is this section pulling from?** Name a real site or print piece.
 2. **What problem does this section solve for the prospect?** Not "looks nice" — what decision does it move them toward?
-3. **What is the signature moment in this section?** Composition, motion, interaction — name one specific thing the reader will remember.
-4. **Would this section work without color?** If yes, it's well-composed. If no, the color is doing too much work.
-5. **What does this section ban from the §9 list?** Point to it.
-6. **Which skills did you invoke to design this?** Name them. If none, the section is probably reverting to defaults.
+3. **Would this section work without color?** If yes, it's well-composed. If no, the color is doing too much work.
+4. **What does this section ban from the AI-slop list?** Point to it.
 
 If any answer is hand-wavy, the section is slop. Rebuild.
 
@@ -350,7 +272,6 @@ If any answer is hand-wavy, the section is slop. Rebuild.
 
 - All five pages built
 - One real case study (or one labeled "concept project")
-- All seven required motion moments from §5 shipped
 - Lighthouse: Performance ≥90, Accessibility ≥95, Best Practices ≥95, SEO ≥95
 - LCP ≤2.5s, INP ≤200ms, CLS ≤0.1
 - Cal.com embed working on /contact
@@ -358,4 +279,3 @@ If any answer is hand-wavy, the section is slop. Rebuild.
 - Playwright smoke test passing on all five routes
 - View Transitions firing between routes
 - Founder photo + headshot taken (or placeholder labeled as such)
-- `prefers-reduced-motion` respected (all motion gates verified)

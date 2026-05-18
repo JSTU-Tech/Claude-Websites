@@ -61,16 +61,17 @@ export function AboutFounder() {
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
           >
             <p>
-              I&apos;m {studio.founderName}. I started this studio because most
-              small business owners are spending money on ads to push traffic
-              into a site that loses three out of every four visitors. The
-              cheaper fix is almost always the site.
+              I&apos;m {studio.founderName}. I started this studio because
+              traditional agencies charge £10k–£30k and take eight to sixteen
+              weeks for sites that look like 2018. The tools and the AI have
+              changed. The pricing model hasn&apos;t caught up. I think it
+              should.
             </p>
             <p>
-              I don&apos;t do logos. I don&apos;t do social. I build the one
-              website your business has been bleeding revenue through, with my
-              own hands, end to end, and I&apos;m on the hook for whether the
-              numbers move.
+              5-figure design quality. 4-figure price. 2-week delivery. I
+              don&apos;t do logos, ads, or social. I build the one website
+              your business should have had three years ago, with my own
+              hands, end to end.
             </p>
           </div>
 

@@ -28,21 +28,21 @@ const cards: Card[] = [
     trade: "Trades & home services",
     outcome:
       "Plumbers, electricians, roofers, builders. A site that books the call before they reach a competitor.",
-    example: "Saltworks Plumbing — 60% more booked jobs in 90 days.",
+    example: "Saltworks Plumbing — live in 14 days, bookings up sharply.",
   },
   {
     variant: "hospitality",
     trade: "Hospitality",
     outcome:
       "Restaurants, hotels, venues. A site that turns a Google Maps tap into a confirmed reservation.",
-    example: "The Wickham — 38% lift in direct bookings, 28-day build.",
+    example: "The Wickham — 14-day build, direct reservations doubled.",
   },
   {
     variant: "professional",
     trade: "Professional services",
     outcome:
       "Accountants, consultants, solicitors, surveyors. A site that pre-qualifies the lead before the first call.",
-    example: "Hatch & Co. — 4× qualified enquiries, all measurable.",
+    example: "Hatch & Co. — 14-day build, half the call time on enquiries.",
   },
 ];
 

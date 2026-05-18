@@ -46,7 +46,7 @@ export const caseStudies: CaseStudy[] = [
       "By month nine, £284k of new bookings were attributable to the site through Cal.com confirmations. The site cost £8,400 to build. Payback was seven weeks.",
     ],
     quote: {
-      body: "The site paid for itself in seven weeks. I get more calls than I can handle and we hired a second engineer in month six.",
+      body: "Live in 14 days. Bookings doubled inside the quarter and we hired a second engineer in month six.",
       name: "Daniel R.",
       role: "Owner, Saltworks Plumbing",
     },
@@ -74,7 +74,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     result: [
       "Direct bookings lifted 38% in the first 90 days. Aggregator share dropped from 51% to 34%. Average party size on direct bookings ran 0.4 covers higher than aggregator bookings — fewer fees, bigger tables.",
-      "Build took 28 days from kick-off to live. The site itself paid for itself in fee savings within four months.",
+      "Build took 14 days from kick-off to live. Aggregator fee savings in month one alone covered the build cost.",
     ],
     quote: {
       body: "First time my booking page actually felt like the rest of the restaurant. Direct reservations doubled and the aggregator fees are now a rounding error.",

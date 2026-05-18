@@ -54,11 +54,10 @@ export function FinalCta() {
       >
         <RevealLines>
           {[
-            <>The cheapest growth</>,
-            <>channel you&apos;re not</>,
-            <>
+            <>Two weeks from now</>,
+            <>you could be{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">using.</span>
+                <span className="relative z-10">live.</span>
                 <motion.span
                   aria-hidden="true"
                   className="absolute inset-x-0 bottom-[-0.04em] h-[0.06em] bg-accent-soft origin-left"
@@ -68,7 +67,7 @@ export function FinalCta() {
                   transition={{
                     duration: 0.8,
                     ease: EASE_QUART,
-                    delay: prefersReduced ? 0 : 1.0,
+                    delay: prefersReduced ? 0 : 0.85,
                   }}
                 />
               </span>
@@ -85,9 +84,9 @@ export function FinalCta() {
           className="md:col-span-7 lg:col-span-6 text-ink/80 max-w-[55ch]"
           style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
         >
-          Twenty-minute call. No deck. I&apos;ll ask three questions, look at
-          your current site live on the call, and tell you whether the
-          maths even works for your business before you spend a pound.
+          Twenty-minute call. No deck. I&apos;ll look at your current site
+          live, walk you through what&apos;s costing you customers, and
+          quote a fixed price before you spend a pound.
         </p>
 
         <div className="md:col-span-5 lg:col-span-6 md:col-start-8 lg:col-start-7 flex flex-col items-start md:items-end gap-6">
