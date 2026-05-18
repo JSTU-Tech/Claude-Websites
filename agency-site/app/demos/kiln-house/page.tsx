@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { KilnShader } from "./_components/kiln-shader";
+import { KilnHeroImage } from "./_components/kiln-hero-image";
 import { KineticHeadline } from "./_components/kinetic-headline";
 import { KilnIntro } from "./_components/kiln-intro";
 import { KilnReserveDock } from "./_components/kiln-reserve-dock";
@@ -84,20 +84,10 @@ function Hero() {
   return (
     <section
       className="relative min-h-[100svh] flex flex-col px-6 md:px-12 pt-32 md:pt-44 pb-12 overflow-hidden"
-      style={{ background: "#1C0F08", color: "var(--kiln-bg)" }}
+      style={{ background: "#0F0A07", color: "var(--kiln-bg)" }}
     >
-      {/* Full-bleed ember shader behind everything */}
-      <KilnShader className="opacity-95" />
-
-      {/* Vignette to bring the type forward */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at 30% 50%, rgba(28,15,8,0.35), rgba(28,15,8,0.78) 75%), linear-gradient(180deg, rgba(28,15,8,0.55) 0%, transparent 25%, transparent 70%, rgba(28,15,8,0.85) 100%)",
-        }}
-      />
+      {/* Pulteney Bridge at dusk — slow Ken Burns + layered vignette */}
+      <KilnHeroImage />
 
       <div className="relative grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-8 flex-1">
         <div className="md:col-span-8 flex flex-col gap-9 justify-center">
