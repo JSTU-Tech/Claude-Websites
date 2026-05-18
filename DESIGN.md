@@ -73,8 +73,11 @@ Graphics are allowed and encouraged when they replace generic stock or carry mea
 - **ShaderHero atmospheric fold** (via `components/motion/shader-hero.tsx`) — WebGL2 fragment-shader nebula on `--ink-deep`, palette-tinted clouds. Hero or mid-page atmospheric section. Pauses rendering when scrolled out of view to spare battery + GPU.
 - **WebGLShader background layer** (via `components/motion/webgl-shader.tsx`) — Three.js RGB-scanline shader that lives inside a parent section as an atmospheric background. Pairs with high-contrast typographic foreground. Pauses when off-screen.
 - **TestimonialsColumn marquee** (via `components/motion/testimonials-column.tsx`) — vertical auto-scrolling testimonial column. Use 2–3 stacked at different durations behind a top/bottom fade mask for a marquee wall effect.
+- **CursorLabel** (via `components/motion/cursor-label.tsx`) — site-wide custom cursor label, reads `data-cursor` attributes. Mount once in the root layout; never the dot-and-ring slop.
+- **LampContainer** (via `components/motion/lamp-container.tsx`) — conic-gradient spotlight fold (sage on ink-deep). Wrap exactly one short headline / number fold per site, max.
+- **AnimatedTextCycle** (via `components/motion/animated-text-cycle.tsx`) — cycling word inside an inline sentence. Pair with the locked positioning sentence's `[trades / hospitality / professional services]` bracket to rotate the named buyer in place.
 
-`SplineScene`, `ContainerScroll`, `ShaderHero`, `WebGLShader` and `TestimonialsColumn` are the **house kit** — wire each one into every new studio build at the appropriate moment, not just this one. They're the differentiators.
+All eight components form the **house kit** — wire each one into every new studio build at the appropriate moment, not just this one. They're the differentiators.
 
 Banned graphic categories listed in §9 still apply (no 3D blobs, no AI-generated abstract gradients, no stock laptop-with-charts).
 

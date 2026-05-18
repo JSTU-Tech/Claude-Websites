@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { studio } from "@/lib/studio";
 import { RevealLines } from "@/components/motion/reveal-lines";
 import { Magnetic } from "@/components/motion/magnetic";
+import AnimatedTextCycle from "@/components/motion/animated-text-cycle";
 
 const EASE_QUART: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -227,14 +228,24 @@ export function Hero() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 pt-8 md:pt-10">
           <motion.p
-            className="md:col-span-7 lg:col-span-6 text-bg/85 max-w-[55ch]"
+            className="md:col-span-7 lg:col-span-6 text-bg/85 max-w-[60ch]"
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             {...reveal(1.4)}
           >
             Most small business sites lose customers before they ever pick up
-            the phone. Mine don&apos;t. I work with trades, hospitality and
-            professional services across the UK to ship sites that pay for
-            themselves in 60–90 days.
+            the phone. Mine don&apos;t. I build sites for{" "}
+            <AnimatedTextCycle
+              className="text-accent-soft font-medium"
+              words={[
+                "tradespeople",
+                "restaurants & bars",
+                "accountants",
+                "joiners & builders",
+                "garages",
+                "consultants",
+              ]}
+            />{" "}
+            across the UK that pay for themselves in 60–90 days.
           </motion.p>
 
           <motion.div

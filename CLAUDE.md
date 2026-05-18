@@ -52,6 +52,9 @@ If you find yourself starting straight from code, stop and run the skill first.
   - `ShaderHero` (`components/motion/shader-hero.tsx`) — WebGL2 fragment-shader atmospheric fold with type overlay (forest-green nebula). Self-contained section with primary + secondary CTAs.
   - `WebGLShader` (`components/motion/webgl-shader.tsx`) — Three.js RGB-scanline background layer for atmospheric sections. Absolute-positioned inside its parent; pauses when off-screen.
   - `TestimonialsColumn` (`components/motion/testimonials-column.tsx`) — vertical auto-scrolling testimonial marquee column. Use 2–3 stacked at different durations for a wall.
+  - `CursorLabel` (`components/motion/cursor-label.tsx`) — site-wide custom cursor label that reads `data-cursor="..."` from any element. Mount once in the root layout.
+  - `LampContainer` (`components/motion/lamp-container.tsx`) — Aceternity-style conic spotlight (sage on ink-deep). Use for one dramatic single-line / single-stat fold per site, no more.
+  - `AnimatedTextCycle` (`components/motion/animated-text-cycle.tsx`) — auto-cycling word swap with blur+y transition and natural width measurement. Use to rotate a list of buyers / verticals / services inside a sentence.
   - External snippets (e.g. 21st.dev, Aceternity) must be migrated from `framer-motion` → `motion/react` and recoloured to the project palette before they ship — never paste classes like `bg-black`, `from-orange-500`, `hover:scale-105` without retoning.
 - **GSAP**: import only inside `"use client"` components, lazy-init inside `useEffect`/`useGSAP`. ScrollTrigger goes through the `gsap-scrolltrigger` skill's recipes — don't freelance it.
 - **shadcn**: install primitives only when needed (`pnpm dlx shadcn@latest add button`). Override radius, color, type classes on every component before merging.

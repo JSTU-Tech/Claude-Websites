@@ -5,6 +5,7 @@ import { SitePreviewFold } from "./_components/site-preview-fold";
 import { FeaturedCaseStudy } from "./_components/featured-case-study";
 import { WhoThisIsFor } from "./_components/who-this-is-for";
 import { Process } from "./_components/process";
+import { LampFold } from "./_components/lamp-fold";
 import { PricingSignal } from "./_components/pricing-signal";
 import { SplineShowcase } from "./_components/spline-showcase";
 import { Testimonials } from "./_components/testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
       <FeaturedCaseStudy />
       <WhoThisIsFor />
       <Process />
+      <LampFold />
       <PricingSignal />
       <SplineShowcase />
       <Testimonials />
