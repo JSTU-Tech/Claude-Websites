@@ -62,16 +62,16 @@ export function AboutFounder() {
           >
             <p>
               I&apos;m {studio.founderName}. I started this studio because
-              traditional agencies charge £10k–£30k and take eight to sixteen
-              weeks for sites that look like 2018. The tools and the AI have
-              changed. The pricing model hasn&apos;t caught up. I think it
-              should.
+              traditional agencies are expensive, slow, and put a project
+              manager between the client and the work. The tools and the AI
+              have changed. The pricing model and the timelines haven&apos;t
+              caught up. I think they should.
             </p>
             <p>
-              5-figure design quality. 4-figure price. 2-week delivery. I
-              don&apos;t do logos, ads, or social. I build the one website
-              your business should have had three years ago, with my own
-              hands, end to end.
+              I don&apos;t do logos, ads, or social. I build the one website
+              your business deserves — audited, quoted, built, launched — with
+              my own hands, end to end. Faster than an agency, founder-led
+              from the first email to the last commit.
             </p>
           </div>
 

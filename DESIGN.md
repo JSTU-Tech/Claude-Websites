@@ -135,14 +135,10 @@ Five pages. No more.
 1. **Hero** — value prop sentence, one supporting line, one CTA ("Book a call"). Founder name + small photo. No carousel, no animated background.
 2. **Proof bar** — 4–6 client names as text (not logos), OR a single big number ("$3.2M in tracked client revenue").
 3. **Featured case study** — one, full-width, real outcome visible without clicking.
-4. **Who this is for** — 5 plain cards: Trades / Hospitality / Professional services / Tech startups / Local services. Each card has a one-liner outcome (per BUSINESS.md §1).
-5. **Process** — 4 numbered steps: (1) Strategic audit, (2) Build, (3) Launch, (4) Care plan. One sentence each. SMB anxiety-killer.
-6. **Pricing signal** — exact copy from BUSINESS.md §5:
-   > Sites from $1,500. Most projects $3,000–$5,000.
-   > Live in two weeks.
-   > Care plans from $79/month.
-   No full menu, no tier comparison. Anchor + range + speed claim only.
-7. **Testimonials** — 2–3 real quotes from real owners with real photos.
+4. **Who this is for** — 5 plain cards: Trades / Hospitality / Professional services / Tech startups / Local services. Each card has a one-liner outcome (per BUSINESS.md §1). Examples should not name specific delivery durations.
+5. **Process** — 5 numbered steps mirroring BUSINESS.md §3: (1) Audit, (2) Discovery, (3) Quote, (4) Build, (5) Launch. Plus an optional (6) Care plan beat at the end. One short paragraph each. The system *is* the wedge.
+6. **Investment / system signal** — sells the process, not a price tag. Communicates: founder-led, faster than agencies, fixed-price-per-project quoted after the audit, optional monthly care after launch. **Do not publish specific prices or specific day counts** (per BUSINESS.md §6 + §7).
+7. **Testimonials** — 2–3 real quotes from real owners with real photos. Quotes must not name specific delivery durations.
 8. **About the founder** — 2–3 sentences, photo, LinkedIn link.
 9. **Final CTA** — repeat. "Book a call."
 
@@ -170,12 +166,20 @@ empower, unleash, supercharge, revolutionize, pixel-perfect,
 
 ### Hero headline (locked)
 
-> **I build the website your business should have had three years ago.**
+> **The website your business deserves.**
 
 Sub-headline:
-> Two weeks. A fraction of agency pricing. Trades, hospitality, professional services, tech startups, local services — if your current site looks like 2018, this is for you.
+> A modern process, founder-led from audit to launch. Faster than typical agency timelines, quoted per project, no monthly invoices unless you want them. For trades, hospitality, professional services, tech startups and local services.
 
 CTA: **Book a call** (not "Get Started", not "Schedule a discovery consultation").
+
+**Banned framings (date-anchored, won't age, won't apply to every client):**
+- ~~"the website your business should have had three years ago"~~
+- ~~"if your current site looks like 2018"~~
+- ~~"5-figure design quality. 4-figure price. 2-week delivery."~~
+- ~~"Live in 14 days" / "Two weeks" / any specific delivery duration~~
+
+The wedge is the *process*, not a date and not a price. See BUSINESS.md §2.
 
 ### Founder voice samples
 

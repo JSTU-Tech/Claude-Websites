@@ -5,9 +5,13 @@ import {
 } from "@/components/motion/reveal-section";
 
 /**
- * Pricing signal — anchor + range + speed claim. Numbers locked in
- * BUSINESS.md §5. No guarantee language, no "pay-for-itself" lift —
- * the edge is speed and value, not ROI promises.
+ * Investment signal — sells the system, not a price tag. Per
+ * BUSINESS.md §6, public copy does NOT publish specific numbers or
+ * specific delivery durations. The wedge is process, faster than an
+ * agency, lower than an agency, quoted privately after the audit.
+ *
+ * Anchors three short statements (process / cost / care) without
+ * naming a single £, $, day, or week.
  */
 
 export function PricingSignal() {
@@ -25,32 +29,32 @@ export function PricingSignal() {
         >
           <RevealItem
             as="h2"
+            id="pricing-heading"
             className="md:col-span-8 font-display font-normal leading-[0.98] tracking-[-0.02em]"
             style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
           >
-            <span className="block text-ink">Sites from</span>
-            <span className="block text-accent">£1,200.</span>
-            <span className="block text-ink/90">
-              Most projects{" "}
-              <span className="whitespace-nowrap">£2,400&nbsp;–&nbsp;£4,000</span>.
-            </span>
+            <span className="block text-ink">A modern process,</span>
+            <span className="block text-accent">quoted per project.</span>
+            <span className="block text-ink/90">No agency markup.</span>
           </RevealItem>
 
           <RevealItem
             as="div"
-            className="md:col-span-4 flex flex-col gap-5 md:pb-3 max-w-[40ch]"
+            className="md:col-span-4 flex flex-col gap-5 md:pb-3 max-w-[42ch]"
           >
             <p
               className="text-ink/90"
               style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             >
-              Live in two weeks. Fixed price, fixed scope. One quote covers
-              copy, design, build, domain, hosting and Google Business Profile
-              setup.
+              Founder-led from audit to launch. One fixed price for the build,
+              sent in writing after the audit and discovery. Faster than a
+              typical agency timeline — weeks of focused work, not a months-long
+              account cycle.
             </p>
             <p className="text-[0.8125rem] text-muted leading-snug">
-              Care plans from £63/month — hosting, backups, monitoring.
-              Optional, not bundled.
+              Optional monthly care plan after launch — only if you want me on
+              hand for ongoing tweaks. Cancel any time, never bundled into the
+              build.
             </p>
           </RevealItem>
         </RevealSection>

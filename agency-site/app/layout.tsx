@@ -40,9 +40,9 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Stuckey — 5-figure design quality. 4-figure price. 2-week delivery.",
+  title: "Stuckey — the website your business deserves.",
   description:
-    "I build the website your business should have had three years ago. Two weeks. A fraction of agency pricing. For trades, hospitality, professional services, tech startups and local services.",
+    "A modern process for businesses that need a better website. Founder-led from audit to launch. Faster than typical agencies, quoted per project, no monthly invoices unless you want them. For trades, hospitality, professional services, tech startups and local services.",
 };
 
 export default function RootLayout({

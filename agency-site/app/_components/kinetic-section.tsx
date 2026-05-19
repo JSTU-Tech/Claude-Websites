@@ -13,11 +13,10 @@ export function KineticSection() {
   return (
     <KineticStrip
       items={[
-        "5-figure design quality",
-        "4-figure price",
-        "2-week delivery",
-        "Sites from £1,200",
-        "Live in 14 days",
+        "Audit. Discover. Quote. Build. Launch.",
+        "Founder-led from start to finish",
+        "Faster than an agency",
+        "Fixed-price, no surprises",
         "Built in Bath, UK",
       ]}
       separator="✦"

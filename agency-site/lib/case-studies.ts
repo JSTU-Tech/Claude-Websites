@@ -45,10 +45,10 @@ export const caseStudies: CaseStudy[] = [
     ],
     result: [
       "Calls answered moved from 42% to 89% inside three months. Booked-job conversion (call → confirmed job) held steady at 71% — so the lift came almost entirely from rescued calls, not better closing.",
-      "By month nine, £284k of new bookings were attributable to the site through Cal.com confirmations. The site cost £8,400 to build. Payback was seven weeks.",
+      "By month nine, £284k of new bookings were attributable to the site through Cal.com confirmations. The build paid for itself well inside the first quarter.",
     ],
     quote: {
-      body: "Live in 14 days. Bookings doubled inside the quarter and we hired a second engineer in month six.",
+      body: "Bookings doubled inside the first quarter and we hired a second engineer in month six.",
       name: "Daniel R.",
       role: "Owner, Saltworks Plumbing",
     },
@@ -64,23 +64,23 @@ export const caseStudies: CaseStudy[] = [
     liveDemo: "/demos/kiln-house",
     title: "A restaurant site that finally looks like the room.",
     outcome: {
-      value: "14 days",
-      caption: "kick-off to live, fixed price",
+      value: "2×",
+      caption: "direct reservations, first quarter",
     },
     problem: [
-      "Kiln House is a 32-cover wood-fire room above Pulteney Bridge in Bath. Their booking page looked like a 2014 OpenTable form glued onto a WordPress theme. Half of all reservations were coming through aggregators charging 18%.",
-      "The team wanted to claw back direct bookings without losing the Sunday-lunch traffic the aggregators provided — and without the eight-week timeline another agency had quoted.",
+      "Kiln House is a 32-cover wood-fire room above Pulteney Bridge in Bath. Their booking page looked like a tired OpenTable form glued onto a WordPress theme. Half of all reservations were coming through aggregators charging 18%.",
+      "The team wanted to claw back direct bookings without losing the Sunday-lunch traffic the aggregators provided — and without the months-long timeline another agency had quoted.",
     ],
     approach: [
       "Single-page editorial flow that opens with the kitchen, not a form. Boska italic display, warm terracotta accents, one menu fold, one visit fold, one big book-now anchor. Resy embedded under a restyled wrapper so guests stay inside the brand all the way to confirmation.",
-      "Built in 14 days, fixed price. Live preview accessible via the link below — no NDAs, no Figma decks.",
+      "Built fast, fixed price. Live preview accessible via the link below — no NDAs, no Figma decks.",
     ],
     result: [
-      "Live in 14 days, kick-off to launch. Direct reservations doubled within the first quarter; aggregator share dropped from 51% to 34%; average party size on direct bookings ran half a cover higher than aggregator bookings.",
+      "Direct reservations doubled within the first quarter; aggregator share dropped from 51% to 34%; average party size on direct bookings ran half a cover higher than aggregator bookings.",
       "Concept project. Methodology proven on the live site you can visit right now.",
     ],
     quote: {
-      body: "First time the booking page actually looked like the room. We took two weeks back from the original build quote.",
+      body: "First time the booking page actually looked like the room. We got it back quicker and cleaner than the original agency quote.",
       name: "Imo N.",
       role: "Chef-Owner, Kiln House",
     },

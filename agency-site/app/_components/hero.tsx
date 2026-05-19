@@ -198,12 +198,11 @@ export function Hero() {
         >
           <RevealLines>
             {[
-              <>I build the website</>,
-              <>your business should</>,
+              <>The website</>,
+              <>your business</>,
               <>
-                have had{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">three years ago.</span>
+                  <span className="relative z-10">deserves.</span>
                   <motion.span
                     aria-hidden="true"
                     className="absolute inset-x-0 bottom-[-0.04em] h-[0.07em] bg-accent-soft origin-left"
@@ -233,8 +232,8 @@ export function Hero() {
             style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
             {...reveal(1.4)}
           >
-            <span className="text-accent-soft font-medium">Two weeks.</span>{" "}
-            A fraction of agency pricing. Built for{" "}
+            <span className="text-accent-soft font-medium">Founder-led</span>{" "}
+            from audit to launch. Built for{" "}
             <AnimatedTextCycle
               className="text-accent-soft font-medium"
               words={[
@@ -245,7 +244,7 @@ export function Hero() {
                 "local services",
               ]}
             />{" "}
-            — if your current site looks like 2018, this is for you.
+            — quoted per project, no monthly invoices unless you want them.
           </motion.p>
 
           <motion.div

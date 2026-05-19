@@ -19,7 +19,7 @@ import {
 
 const all: ColumnTestimonial[] = [
   {
-    text: "Live in 14 days. Bookings doubled inside the quarter and we hired a second engineer in month six.",
+    text: "He shipped fast, kept me in the loop the whole way, and the rebuild paid for itself before the next quarter ended. Bookings doubled and we hired a second engineer in month six.",
     image: "",
     name: "Daniel R.",
     role: "Owner, Saltworks Plumbing (concept)",
@@ -37,7 +37,7 @@ const all: ColumnTestimonial[] = [
     role: "Director, Hatch & Co. (concept)",
   },
   {
-    text: "Two weeks from kick-off to live. No back and forth on scope, no surprise invoices, no agency-speak. Just the site that we agreed in the brief.",
+    text: "Quoted in writing, built fast, launched on the date he committed to. No back and forth on scope, no surprise invoices, no agency-speak. Just the site we agreed in the brief.",
     image: "",
     name: "Sarah W.",
     role: "Owner, Cotswold Joinery (concept)",

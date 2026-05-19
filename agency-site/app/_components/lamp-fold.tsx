@@ -32,9 +32,9 @@ export function LampFold() {
         className="font-display font-normal text-center text-ink leading-[0.98] tracking-[-0.025em] max-w-[18ch] mx-auto"
         style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
       >
-        One quote. One project.
+        One quote. One build.
         <br />
-        <span className="text-accent-soft">No retainers.</span>
+        <span className="text-accent-soft">Care if you want it.</span>
       </motion.h2>
 
       <motion.p
@@ -45,9 +45,9 @@ export function LampFold() {
         className="mt-8 text-ink/75 max-w-[52ch] text-center"
         style={{ fontSize: "var(--text-body-lg)", lineHeight: 1.55 }}
       >
-        I quote the project, fix the price, and ship it. No monthly invoices,
-        no scope-creep clauses, no surprise &ldquo;optimisation&rdquo;
-        retainers six months down the line.
+        I quote the build in writing, fix the price, and ship it. After launch
+        you can pick up an optional monthly care plan for ongoing tweaks — or
+        you can take the site and run. Never bundled, never required.
       </motion.p>
 
       <motion.div
